@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ヤマハ青春ポップス 滋賀・大津北エリア | 無料体験会 参加者募集中</title>
+    <meta name="description" content="楽譜ゼロでも大丈夫！エレクトーンの生伴奏で60〜80年代のヒット曲を歌って踊る「ヤマハ青春ポップス」。滋賀・大津北エリアで仲間と一緒に、もう一度青春しませんか？無料体験会実施中！">
+    <meta name="keywords" content="大津 青春ポップス, シニア カラオケレッスン 滋賀, 昭和歌謡 サークル, ヤマハ, 大津市, 堅田, 真野, 和邇">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Reset & Basic Styles */
+        :root {
+            --color-bg: #fdfaf4; /* クリーム */
+            --color-primary: #e50012; /* ヤマハレッド */
+            --color-secondary: #4DD0E1; /* ターコイズ */
+            --color-accent: #f5a623; /* イエロー */
+            --color-text: #3d3d3d;
+            --color-white: #ffffff;
+            --font-heading: 'Kiwi Maru', serif;
+            --font-body: 'Noto Sans JP', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.8;
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            margin: 0;
+            padding: 0;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+
+        section:nth-of-type(even) {
+            background-color: var(--color-white);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            vertical-align: middle;
+            border-radius: 8px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 500;
+            line-height: 1.4;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            text-align: center;
+            color: var(--color-primary);
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
+            border-radius: 2px;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            position: relative;
+            height: 80vh;
+            min-height: 500px;
+            display: flex;
+            align-items: flex-end; /* コンテンツを下部に配置 */
+            justify-content: center;
+            text-align: center;
+            color: var(--color-white);
+            background-image: url('https://i.imgur.com/gK6B6E7.jpg'); /* 提供画像に変更 */
+            background-size: cover;
+            background-position: center 30%;
+            padding: 20px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60%;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); /* 下からグラデーション */
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding-bottom: 40px;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+        }
+
+        .hero-subcopy {
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            font-weight: normal;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--color-accent); /* ボタンの色を黄色に変更 */
+            color: var(--color-text);
+            padding: 18px 40px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            font-family: var(--font-heading);
+            text-decoration: none;
+            border-radius: 50px;
+            border: 2px solid var(--color-white);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+            transition: transform 0.2s, background-color 0.2s;
+            animation: pulse 2s infinite;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            background-color: #ffc107;
+        }
+        
+        .cta-button span {
+            display: block;
+            font-size: 0.8rem;
+            font-family: var(--font-body);
+            margin-top: 5px;
+            font-weight: normal;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 5px 15px rgba(245, 166, 35, 0.5); }
+            50% { box-shadow: 0 5px 25px rgba(245, 166, 35, 0.8); }
+            100% { box-shadow: 0 5px 15px rgba(245, 166, 35, 0.5); }
+        }
+
+        /* --- For You Section --- */
+        .for-you ul {
+            list-style: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .for-you li {
+            background: var(--color-white);
+            border-left: 5px solid var(--color-primary);
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .for-you li::before {
+            content: '✓';
+            color: var(--color-primary);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        /* --- About Section --- */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+        @media (min-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .about-box {
+            background: var(--color-bg);
+            border: 2px dashed var(--color-primary);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .about-box p { font-size: 1.1rem; }
+        .about-box ul { list-style: none; padding: 0; margin: 20px 0; }
+        .about-box ul li { margin-bottom: 10px; }
+        .about-box .note { font-size: 0.9rem; margin-top: 20px; color: #555; }
+        .about-box .sponsors { margin-top: 10px; font-weight: bold; }
+        
+        /* --- Charms Section (Cards) --- */
+        .charms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .charm-card {
+            background: var(--color-white);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .charm-card:hover { transform: translateY(-10px); }
+        .charm-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 0; }
+        .charm-card-content { padding: 20px; }
+        .charm-card h3 { color: var(--color-secondary); font-size: 1.5rem; margin-bottom: 10px; }
+
+        /* --- Voices Section --- */
+        .voice {
+            background: var(--color-bg);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            position: relative;
+            border-top: 5px solid var(--color-primary);
+        }
+        
+        .voice::before {
+            content: '“';
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 6rem;
+            color: var(--color-primary);
+            opacity: 0.1;
+            position: absolute;
+            top: -10px;
+            left: 15px;
+        }
+        .voice p { font-size: 1.1rem; margin-bottom: 15px; }
+        .voice-author { text-align: right; font-weight: bold; color: var(--color-text); }
+
+        /* --- Schedule Section --- */
+        .schedule-table { width: 100%; border-collapse: collapse; text-align: center; margin-bottom: 20px; }
+        .schedule-table th, .schedule-table td { padding: 15px; border: 1px solid #ddd; }
+        .schedule-table th { background-color: var(--color-primary); color: var(--color-white); font-family: var(--font-body); }
+        .status-good { color: #2e7d32; font-weight: bold; }
+        .status-ok { color: #f57c00; font-weight: bold; }
+        .status-few { color: #d32f2f; font-weight: bold; }
+        .schedule-note { text-align: center; font-size: 0.9rem; background-color: var(--color-bg); padding: 15px; border-radius: 8px; }
+        
+        /* --- Flow Section (Timeline) --- */
+        .timeline { position: relative; max-width: 600px; margin: 0 auto; padding-left: 30px; }
+        .timeline::before { content: ''; position: absolute; top: 0; left: 10px; height: 100%; width: 4px; background-color: var(--color-secondary); opacity: 0.3; }
+        .timeline-item { position: relative; margin-bottom: 30px; }
+        .timeline-item:last-child { margin-bottom: 0; }
+        .timeline-item::before { content: ''; position: absolute; top: 5px; left: -28px; width: 20px; height: 20px; border-radius: 50%; background-color: var(--color-secondary); border: 3px solid var(--color-white); }
+        .timeline-item h3 { font-size: 1.3rem; color: var(--color-primary); margin-bottom: 5px; }
+        .timeline-item img { margin-top: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        
+        /* --- FAQ Section --- */
+        .faq details { background: var(--color-white); border: 1px solid #eee; border-radius: 8px; margin-bottom: 10px; padding: 15px 20px; }
+        .faq summary { font-weight: bold; cursor: pointer; font-size: 1.1rem; display: flex; align-items: center; list-style: none; }
+        .faq summary::-webkit-details-marker { display: none; }
+        .faq summary::before { content: 'Q.'; color: var(--color-primary); margin-right: 10px; font-size: 1.2em; }
+        .faq summary::after { content: '+'; margin-left: auto; font-size: 1.5rem; color: var(--color-secondary); transition: transform 0.2s; }
+        .faq details[open] summary::after { transform: rotate(45deg); }
+        .faq div { margin-top: 15px; padding-left: 35px; display: flex; }
+        .faq div::before { content: 'A.'; color: var(--color-secondary); font-weight: bold; margin-right: 10px; font-size: 1.2em; }
+
+        /* --- Price Section --- */
+        .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; text-align: center; }
+        .price-item { padding: 20px; border: 2px solid var(--color-secondary); border-radius: 10px; }
+        .price-item h3 { color: var(--color-secondary); margin-bottom: 10px; }
+        .price-item .price-value { font-size: 2rem; font-weight: bold; color: var(--color-primary); }
+        .price-item .price-value span { font-size: 1rem; font-weight: normal; }
+        .price-campaign { grid-column: 1 / -1; background: linear-gradient(45deg, var(--color-primary), var(--color-accent)); color: var(--color-white); border: none; padding: 30px; }
+        .price-campaign .price-value { color: var(--color-white); text-shadow: 1px 1px 3px rgba(0,0,0,0.2); }
+        .price-campaign .original-price { text-decoration: line-through; opacity: 0.8; margin-right: 10px; }
+
+        /* --- Form Section --- */
+        .form-section { background: var(--color-white); }
+        .form-container { max-width: 600px; margin: 0 auto; padding: 30px; background-color: var(--color-bg); border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.05); }
+        .form-container .form-logo { max-width: 400px; margin: 0 auto 30px; display: block; }
+        .campaign-banner { background-color: var(--color-primary); color: var(--color-white); text-align: center; padding: 15px; border-radius: 8px; margin-bottom: 30px; font-size: 1.2rem; font-weight: bold; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem; font-family: var(--font-body); }
+        .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--color-secondary); box-shadow: 0 0 5px rgba(77, 208, 225, 0.5); }
+        .submit-button { width: 100%; background-color: var(--color-primary); color: var(--color-white); padding: 15px; border: none; border-radius: 5px; font-size: 1.2rem; font-weight: bold; font-family: var(--font-heading); cursor: pointer; transition: background-color 0.3s; }
+        .submit-button:hover { background-color: #c0000f; }
+        .form-note { font-size: 0.9rem; text-align: center; margin-top: 20px; }
+
+        /* --- Footer --- */
+        .footer { background-color: var(--color-text); color: #ccc; text-align: center; padding: 40px 20px; }
+        .footer p { margin: 0; font-size: 1.2rem; font-family: var(--font-heading); color: var(--color-white); margin-bottom: 20px; }
+        .footer .copyright { font-size: 0.8rem; font-family: var(--font-body); color: #aaa; }
+        
+        /* --- Fade-in Animation --- */
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            .container { padding: 30px 15px; }
+            section { padding: 40px 0; }
+            .hero { height: 70vh; min-height: 450px; background-position: center 20%; }
+            .hero h1 { font-size: 1.8rem; }
+            .hero-subcopy { font-size: 1rem; }
+            .cta-button { padding: 15px 30px; font-size: 1.1rem; }
+            h2 { font-size: 1.8rem; }
+            .schedule-table { font-size: 0.9rem; }
+            .schedule-table th, .schedule-table td { padding: 8px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>♪ もう一度、あの頃の歌を ─<br>湖畔でよみがえる私たちの青春 ♪</h1>
+            <p class="hero-subcopy">
+                「カラオケ以上、レッスン未満」だから、楽譜ゼロでも大丈夫。<br>90分の“ライブ感”をエレクトーン生伴奏で！
+            </p>
+            <a href="#form-section" class="cta-button">
+                無料体験会を予約する
+                <span>（残席わずか）</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. こんなあなたに -->
+        <section class="for-you">
+            <div class="container fade-in">
+                <h2>こんなあなたに</h2>
+                <ul>
+                    <li>子育ても仕事もひと区切り、「今度は私の番」と感じている 45〜70 代</li>
+                    <li>カラオケが好きだけど一人で行くのは…とためらっていた方</li>
+                    <li>仲間づくりをしたい・運動不足を解消したいアクティブシニア</li>
+                    <li>介護やパートナーの喪失を乗り越え、心の張り合いを探している方</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 3. 青春ポップスとは？ -->
+        <section class="about">
+            <div class="container fade-in">
+                <h2>青春ポップスとは？</h2>
+                <div class="about-content">
+                    <img src="https://i.imgur.com/9lQ2gKj.jpg" alt="エレクトーンの生伴奏で楽しく歌うレッスン風景">
+                    <div class="about-box">
+                        <p>1960〜80年代のヒット曲を<br>歌って・踊って・ハモって楽しむヤマハの大人向け新プログラム</p>
+                        <ul>
+                            <li>月2回／1回90分。ストレッチ・発声 → 映像レッスン → エレクトーン伴奏で合唱</li>
+                            <li>全100曲以上から毎回2曲をセレクト。キーは＋/−調整可、ハモリは映像でレクチャー</li>
+                            <li>教材費ゼロ、入会金 2,200円・月会費 4,070円〜（税込）</li>
+                        </ul>
+                        <p class="note">※ 全国でクラス増設が続く人気講座です</p>
+                        <p class="sponsors">提携楽器店: 島村楽器・新興楽器</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. ３つの魅力 -->
+        <section class="charms">
+            <div class="container fade-in">
+                <h2>３つの魅力</h2>
+                <div class="charms-grid">
+                    <div class="charm-card">
+                        <img src="https://i.imgur.com/O6Ld1Xb.jpg" alt="女性が楽しそうに歌っている">
+                        <div class="charm-card-content">
+                            <h3>懐かしさで若返る</h3>
+                            <p>「心の旅」「卒業写真」…<br>歌い出した瞬間にタイムスリップ</p>
+                        </div>
+                    </div>
+                    <div class="charm-card">
+                        <img src="https://i.imgur.com/mOFL5hH.jpg" alt="3人の仲間が楽しそうに歌っている">
+                        <div class="charm-card-content">
+                            <h3>仲間ができる</h3>
+                            <p>レッスン後は近くの喫茶店で“青春カフェタイム”。自然に輪が広がります。</p>
+                        </div>
+                    </div>
+                    <div class="charm-card">
+                        <img src="https://i.imgur.com/gHhC92u.jpg" alt="映像を見ながらステップを踏むレッスン">
+                        <div class="charm-card-content">
+                            <h3>健康 & ストレス発散</h3>
+                            <p>大きな声＋軽いステップで有酸素運動。月２回の“元気補給日”</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 5. 参加者の声 -->
+        <section class="voices">
+            <div class="container fade-in">
+                <h2>参加者の声</h2>
+                <div class="voice">
+                    <p>「レッスン日が待ち遠しくて、昔より姿勢も良くなった気がします！」</p>
+                    <div class="voice-author">— まゆみさん（63・堅田）</div>
+                </div>
+                <div class="voice">
+                    <p>「夫婦で参加。家でもハモリの練習が会話のネタに！」</p>
+                    <div class="voice-author">— 健治さん（58・真野）</div>
+                </div>
+                <div class="voice">
+                    <p>「親の介護明けで心が空っぽでしたが、歌うたびに元気が戻りました」</p>
+                    <div class="voice-author">— 佳代さん（67・志賀）</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. 開講クラス & スケジュール -->
+        <section class="schedule">
+            <div class="container fade-in">
+                <h2>開講クラス & スケジュール</h2>
+                <div style="overflow-x:auto;">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>会場</th>
+                                <th>曜日・時間</th>
+                                <th>定員</th>
+                                <th>ステータス</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>大津わにセンター</td>
+                                <td>第1・3 火 10:00〜11:30</td>
+                                <td>12 名</td>
+                                <td><span class="status-good">◎ 体験受付中</span></td>
+                            </tr>
+                            <tr>
+                                <td>堅田サロン教室</td>
+                                <td>第2・4 木 13:30〜15:00</td>
+                                <td>10 名</td>
+                                <td><span class="status-ok">○ 残 3</span></td>
+                            </tr>
+                            <tr>
+                                <td>真野カルチャールーム</td>
+                                <td>第1・3 土 14:00〜15:30</td>
+                                <td>15 名</td>
+                                <td><span class="status-few">△ 体験のみ</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="schedule-note">※ 各会場、駐車場完備。大津わにセンターはJR湖西線「和邇」駅から徒歩3分、バリアフリートイレもございます。</p>
+            </div>
+        </section>
+
+        <!-- 7. 体験レッスンの流れ -->
+        <section class="flow">
+            <div class="container fade-in">
+                <h2>体験レッスンの流れ</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>受付・自己紹介（10分）</h3>
+                        <p>まずはリラックス。簡単な自己紹介で打ち解けましょう。</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>ウォームアップストレッチ（5分）</h3>
+                        <p>体をほぐして、声を出しやすい状態に整えます。</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>発声 & リズム遊び（10分）</h3>
+                        <p>簡単な発声練習と手拍子で、音楽の世界へ！</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>メイン曲 ×２ を映像で習得（45分）</h3>
+                        <p>懐かしのヒット曲を映像に合わせて楽しく練習。ハモリにも挑戦！</p>
+                        <img src="https://i.imgur.com/gHhC92u.jpg" alt="歌詞テロップと振り付けが表示されたレッスン用映像">
+                    </div>
+                    <div class="timeline-item">
+                        <h3>プチ発表 & 交流ティータイム（20分）</h3>
+                        <p>最後はみんなで合唱！その後はお茶を飲みながら楽しくおしゃべり。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. よくある質問 (FAQ) -->
+        <section class="faq">
+            <div class="container fade-in">
+                <h2>よくある質問</h2>
+                <details>
+                    <summary>高いキーが出ません…</summary>
+                    <div>
+                        <p>ご安心ください。伴奏キーを−2〜−4に変更可能です。ご自身の歌いやすい声域で無理なく楽しめます。</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>振り付けが難しくて不安</summary>
+                    <div>
+                        <p>足踏みと手拍子だけの簡単なライト版もご用意しています。イスに座ったままのご参加ももちろんOKです。</p>
+                    </div>
+                </details>
+                <details>
+                    <summary>月2回では物足りない？</summary>
+                    <div>
+                        <p>もっと歌いたい方のために、教室が自主的なカラオケ会をサポートします。歌仲間同士で集まって、週1ペースで楽しんでいるグループもありますよ。</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- 9. 料金プラン -->
+        <section class="price">
+            <div class="container fade-in">
+                <h2>料金プラン</h2>
+                <div class="price-grid">
+                    <div class="price-item">
+                        <h3>入会金</h3>
+                        <div class="price-value">2,200<span>円</span></div>
+                        <p>(税込)</p>
+                    </div>
+                    <div class="price-item">
+                        <h3>月会費</h3>
+                        <div class="price-value">4,070<span>円〜</span></div>
+                        <p>(平日クラス)<br>土日クラス: 4,400円</p>
+                    </div>
+                    <div class="price-item price-campaign">
+                        <h3>体験レッスン</h3>
+                        <div class="price-value">
+                            <span class="original-price">1,100円</span>→ 今だけ 0<span>円</span>
+                        </div>
+                        <p>(要予約)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 10. 今すぐ無料体験を予約 -->
+        <section id="form-section" class="form-section">
+            <div class="container fade-in">
+                <div class="form-container">
+                    <img src="https://i.imgur.com/tC7K39W.png" alt="歌って踊れる 青春ポップス ヤマハの教室で" class="form-logo">
+                    <div class="campaign-banner">
+                        ＼ 8月31日まで体験無料キャンペーン実施中！ ／
+                    </div>
+                    <form action="#" method="POST" onsubmit="alert('お申し込みありがとうございます！スタッフより24時間以内にご連絡いたします。'); return false;">
+                        <div class="form-group">
+                            <label for="name">お名前</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="age">ご年齢</label>
+                            <input type="number" id="age" name="age" min="20" max="99" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="venue">ご希望会場・日程</label>
+                            <select id="venue" name="venue" required>
+                                <option value="">選択してください</option>
+                                <option value="wani_tue">大津わにセンター (第1・3 火 10:00〜)</option>
+                                <option value="katata_thu">堅田サロン教室 (第2・4 木 13:30〜)</option>
+                                <option value="mano_sat">真野カルチャールーム (第1・3 土 14:00〜)</option>
+                                <option value="other">上記以外の日程を相談したい</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact">電話番号またはメールアドレス</label>
+                            <input type="text" id="contact" name="contact" required>
+                        </div>
+                        <button type="submit" class="submit-button" id="trial_signup">無料で体験してみる</button>
+                        <p class="form-note">送信後、スタッフより24h以内に日程確定のご連絡を差し上げます。</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>“懐かしいあのメロディーが、<br>これからの毎日にリズムをつけてくれる。”</p>
+        <div class="copyright">
+            大津北の仲間と一緒に、あなたの新しい青春を始めましょう！<br>
+            &copy; 2024 ヤマハ青春ポップス 大津北エリア.
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for fade-in animation on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeInElements = document.querySelectorAll('.fade-in');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            fadeInElements.forEach(el => {
+                observer.observe(el);
+            });
+            
+            // Track CTA clicks (for Google Tag Manager simulation)
+            const trackClick = (elementId, eventName) => {
+                const element = document.getElementById(elementId);
+                if(element) {
+                    element.addEventListener('click', () => {
+                        console.log(`Event tracked: ${eventName}`);
+                        // In a real scenario, you would push to dataLayer
+                        // window.dataLayer = window.dataLayer || [];
+                        // window.dataLayer.push({'event': eventName});
+                    });
+                }
+            };
+            
+            document.querySelectorAll('.cta-button').forEach(button => {
+                button.addEventListener('click', () => {
+                    console.log('Event tracked: cta_click');
+                });
+            });
+
+            trackClick('trial_signup', 'trial_signup');
+        });
+    </script>
+
+</body>
+</html>
