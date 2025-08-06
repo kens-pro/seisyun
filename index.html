@@ -101,9 +101,7 @@
             justify-content: center;
             text-align: center;
             color: var(--color-white);
-            /* ▼▼▼ ご指定の通り、ここの画像パスを変更しました ▼▼▼ */
             background-image: url('images/group-3P.jpg');
-            /* ▲▲▲ ご指定の通り、ここの画像パスを変更しました ▲▲▲ */
             background-size: cover;
             background-position: center 30%;
             padding: 20px;
@@ -222,8 +220,6 @@
         .about-box p { font-size: 1.1rem; }
         .about-box ul { list-style: none; padding: 0; margin: 20px 0; }
         .about-box ul li { margin-bottom: 10px; }
-        .about-box .note { font-size: 0.9rem; margin-top: 20px; color: #555; }
-        .about-box .sponsors { margin-top: 10px; font-weight: bold; }
         
         /* --- Charms Section (Cards) --- */
         .charms-grid {
@@ -274,8 +270,6 @@
         .schedule-table th, .schedule-table td { padding: 15px; border: 1px solid #ddd; }
         .schedule-table th { background-color: var(--color-primary); color: var(--color-white); font-family: var(--font-body); }
         .status-good { color: #2e7d32; font-weight: bold; }
-        .status-ok { color: #f57c00; font-weight: bold; }
-        .status-few { color: #d32f2f; font-weight: bold; }
         .schedule-note { text-align: center; font-size: 0.9rem; background-color: var(--color-bg); padding: 15px; border-radius: 8px; }
         
         /* --- Flow Section (Timeline) --- */
@@ -305,20 +299,6 @@
         .price-item .price-value span { font-size: 1rem; font-weight: normal; }
         .price-campaign { grid-column: 1 / -1; background: linear-gradient(45deg, var(--color-primary), var(--color-accent)); color: var(--color-white); border: none; padding: 30px; }
         .price-campaign .price-value { color: var(--color-white); text-shadow: 1px 1px 3px rgba(0,0,0,0.2); }
-        .price-campaign .original-price { text-decoration: line-through; opacity: 0.8; margin-right: 10px; }
-
-        /* --- Form Section --- */
-        .form-section { background: var(--color-white); }
-        .form-container { max-width: 600px; margin: 0 auto; padding: 30px; background-color: var(--color-bg); border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.05); }
-        .form-container .form-logo { max-width: 400px; margin: 0 auto 30px; display: block; }
-        .campaign-banner { background-color: var(--color-primary); color: var(--color-white); text-align: center; padding: 15px; border-radius: 8px; margin-bottom: 30px; font-size: 1.2rem; font-weight: bold; }
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
-        .form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem; font-family: var(--font-body); }
-        .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--color-secondary); box-shadow: 0 0 5px rgba(77, 208, 225, 0.5); }
-        .submit-button { width: 100%; background-color: var(--color-primary); color: var(--color-white); padding: 15px; border: none; border-radius: 5px; font-size: 1.2rem; font-weight: bold; font-family: var(--font-heading); cursor: pointer; transition: background-color 0.3s; }
-        .submit-button:hover { background-color: #c0000f; }
-        .form-note { font-size: 0.9rem; text-align: center; margin-top: 20px; }
 
         /* --- Footer --- */
         .footer { background-color: var(--color-text); color: #ccc; text-align: center; padding: 40px 20px; }
@@ -328,6 +308,75 @@
         /* --- Fade-in Animation --- */
         .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        /* --- CTA Block Styles (Re-designed for 2 buttons) --- */
+        .cta-section {
+            padding: 40px 0;
+            background-color: transparent;
+        }
+        .cta-wrapper {
+            background-color: var(--color-white);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+            display: flex;
+            flex-direction: column; /* Mobile-first: start as a column */
+            align-items: center;
+            gap: 25px;
+        }
+        /* On wider screens, switch to a row layout */
+        @media (min-width: 768px) {
+            .cta-wrapper {
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: flex-start; /* Align items to the top */
+            }
+        }
+        .cta-box {
+            text-align: center;
+            width: 100%;
+            max-width: 320px;
+        }
+        /* Base styles for both buttons to ensure same height */
+        .cta-button-main, .phone-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 16px 20px; /* Vertical padding is key */
+            min-height: 58px; /* Enforce minimum height */
+            font-size: 1.2rem;
+            font-weight: bold;
+            font-family: var(--font-heading);
+            text-decoration: none;
+            border-radius: 50px;
+            box-sizing: border-box;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-button-main:hover, .phone-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+        /* Specific style for Web Reservation Button */
+        .cta-button-main {
+            background-color: var(--color-accent);
+            color: var(--color-text);
+        }
+        /* Specific style for Phone Button */
+        .phone-button {
+            background-color: #28a745;
+            color: var(--color-white);
+        }
+        .phone-button .icon-phone {
+            margin-right: 10px;
+        }
+        .cta-note {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: var(--color-text);
+            line-height: 1.5;
+        }
 
         /* --- Responsive Design --- */
         @media (max-width: 768px) {
@@ -352,12 +401,30 @@
             <p class="hero-subcopy">
                 「カラオケ以上、レッスン未満」だから、楽譜ゼロでも大丈夫。<br>90分の“ライブ感”をエレクトーン生伴奏で！
             </p>
-            <a href="#form-section" class="cta-button">
+            <a href="#" class="cta-button">
                 無料体験会を予約する
-                <span>（残席わずか）</span>
             </a>
         </div>
     </header>
+
+    <!-- ▼▼▼ CTAブロック 1 (冒頭) ▼▼▼ -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-wrapper">
+                <div class="cta-box">
+                    <a href="#" class="cta-button-main">無料体験ご予約</a>
+                </div>
+                <div class="cta-box">
+                    <a href="tel:0740-22-2063" class="phone-button">
+                        <svg class="icon-phone" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        電話でお問い合わせ
+                    </a>
+                    <p class="cta-note">10:30 - 19:30 (月曜定休)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ▲▲▲ CTAブロック 1 (冒頭) ▲▲▲ -->
 
     <main>
         <!-- 2. こんなあなたに -->
@@ -378,17 +445,15 @@
             <div class="container fade-in">
                 <h2>青春ポップスとは？</h2>
                 <div class="about-content">
-                    <img src="https://i.imgur.com/9lQ2gKj.jpg" alt="エレクトーンの生伴奏で楽しく歌うレッスン風景">
+                    <img src="images/group-5P (1).jpg" alt="エレクトーンの生伴奏で楽しく歌うレッスン風景">
                     <div class="about-box">
                         <p>1960〜80年代のヒット曲を<br>歌って・踊って・ハモって楽しむヤマハの大人向け新プログラム</p>
                         <ul>
                             <li>月2回／1回90分。ストレッチ・発声 → 映像レッスン → エレクトーン伴奏で合唱</li>
-                            <li>全100曲以上から毎回2曲をセレクト。キーは＋/−調整可、ハモリは映像でレクチャー</li>
-                            <li>教材費ゼロ、入会金 2,200円・月会費 4,070円〜（税込）</li>
+                            <li>全100曲以上から毎回曲をセレクト。ハモリは映像でレクチャー</li>
+                            <li>入会金 2,200円・月会費 4,070円〜（税込）教材不要</li>
                         </ul>
-                        <p class="note">※ 全国でクラス増設が続く人気講座です</p>
-                        <p class="sponsors">提携楽器店: 島村楽器・新興楽器</p>
-                    </div>
+                        </div>
                 </div>
             </div>
         </section>
@@ -399,21 +464,21 @@
                 <h2>３つの魅力</h2>
                 <div class="charms-grid">
                     <div class="charm-card">
-                        <img src="https://i.imgur.com/O6Ld1Xb.jpg" alt="女性が楽しそうに歌っている">
+                        <img src="images/group-5P (1).jpg" alt="女性が楽しそうに歌っている">
                         <div class="charm-card-content">
                             <h3>懐かしさで若返る</h3>
                             <p>「心の旅」「卒業写真」…<br>歌い出した瞬間にタイムスリップ</p>
                         </div>
                     </div>
                     <div class="charm-card">
-                        <img src="https://i.imgur.com/mOFL5hH.jpg" alt="3人の仲間が楽しそうに歌っている">
+                        <img src="images/group-3P.jpg" alt="3人の仲間が楽しそうに歌っている">
                         <div class="charm-card-content">
                             <h3>仲間ができる</h3>
                             <p>レッスン後は近くの喫茶店で“青春カフェタイム”。自然に輪が広がります。</p>
                         </div>
                     </div>
                     <div class="charm-card">
-                        <img src="https://i.imgur.com/gHhC92u.jpg" alt="映像を見ながらステップを踏むレッスン">
+                        <img src="images/Main.jpg" alt="ステップを踏むレッスン">                    
                         <div class="charm-card-content">
                             <h3>健康 & ストレス発散</h3>
                             <p>大きな声＋軽いステップで有酸素運動。月２回の“元気補給日”</p>
@@ -459,26 +524,14 @@
                         <tbody>
                             <tr>
                                 <td>大津わにセンター</td>
-                                <td>第1・3 火 10:00〜11:30</td>
-                                <td>12 名</td>
+                                <td>水曜日 10:00〜11:30</td>
+                                <td>8名</td>
                                 <td><span class="status-good">◎ 体験受付中</span></td>
-                            </tr>
-                            <tr>
-                                <td>堅田サロン教室</td>
-                                <td>第2・4 木 13:30〜15:00</td>
-                                <td>10 名</td>
-                                <td><span class="status-ok">○ 残 3</span></td>
-                            </tr>
-                            <tr>
-                                <td>真野カルチャールーム</td>
-                                <td>第1・3 土 14:00〜15:30</td>
-                                <td>15 名</td>
-                                <td><span class="status-few">△ 体験のみ</span></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <p class="schedule-note">※ 各会場、駐車場完備。大津わにセンターはJR湖西線「和邇」駅から徒歩3分、バリアフリートイレもございます。</p>
+                <p class="schedule-note">※ 駐車場有　大津わにセンターはJR湖西線「和邇」駅正面徒歩1分。</p>
             </div>
         </section>
 
@@ -488,29 +541,52 @@
                 <h2>体験レッスンの流れ</h2>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <h3>受付・自己紹介（10分）</h3>
-                        <p>まずはリラックス。簡単な自己紹介で打ち解けましょう。</p>
+                        <h3>待合室で受付</h3>
+                        <p>まずはリラックス。教室係がエスコートします。</p>
                     </div>
                     <div class="timeline-item">
-                        <h3>ウォームアップストレッチ（5分）</h3>
+                        <h3>ウォームアップストレッチ</h3>
                         <p>体をほぐして、声を出しやすい状態に整えます。</p>
                     </div>
                     <div class="timeline-item">
-                        <h3>発声 & リズム遊び（10分）</h3>
-                        <p>簡単な発声練習と手拍子で、音楽の世界へ！</p>
+                        <h3>発声練習</h3>
+                        <p>簡単な発声練習で、音楽の世界へ！</p>
                     </div>
                     <div class="timeline-item">
-                        <h3>メイン曲 ×２ を映像で習得（45分）</h3>
+                        <h3>ステップ（月1回）</h3>
+                        <p>スター気分で楽しくステップ</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>メイン曲を映像で習得</h3>
                         <p>懐かしのヒット曲を映像に合わせて楽しく練習。ハモリにも挑戦！</p>
-                        <img src="https://i.imgur.com/gHhC92u.jpg" alt="歌詞テロップと振り付けが表示されたレッスン用映像">
+                        <img src="images/Tv.jpg" alt="歌詞テロップと振り付けが表示されたレッスン用映像">
                     </div>
                     <div class="timeline-item">
-                        <h3>プチ発表 & 交流ティータイム（20分）</h3>
-                        <p>最後はみんなで合唱！その後はお茶を飲みながら楽しくおしゃべり。</p>
+                        <h3>おしゃべりタイム</h3>
+                        <p>ストレッチや合唱の合間の楽しいおしゃべりが特長です。</p>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- ▼▼▼ CTAブロック 2 (中盤) ▼▼▼ -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-wrapper">
+                    <div class="cta-box">
+                        <a href="#" class="cta-button-main">無料体験ご予約</a>
+                    </div>
+                    <div class="cta-box">
+                        <a href="tel:0740-22-2063" class="phone-button">
+                            <svg class="icon-phone" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            電話でお問い合わせ
+                        </a>
+                        <p class="cta-note">10:30 - 19:30 (月曜定休)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ▲▲▲ CTAブロック 2 (中盤) ▲▲▲ -->
 
         <!-- 8. よくある質問 (FAQ) -->
         <section class="faq">
@@ -519,19 +595,19 @@
                 <details>
                     <summary>高いキーが出ません…</summary>
                     <div>
-                        <p>ご安心ください。伴奏キーを−2〜−4に変更可能です。ご自身の歌いやすい声域で無理なく楽しめます。</p>
+                        <p>ご安心ください。ご自身の歌いやすいパートで無理なく楽しめます。</p>
                     </div>
                 </details>
                 <details>
                     <summary>振り付けが難しくて不安</summary>
                     <div>
-                        <p>足踏みと手拍子だけの簡単なライト版もご用意しています。イスに座ったままのご参加ももちろんOKです。</p>
+                        <p>簡単振り付けで安心。もし難しいとお感じならできるところだけでもＯＫ！イスに座ったままのご参加ももちろんOKです。</p>
                     </div>
                 </details>
                 <details>
-                    <summary>月2回では物足りない？</summary>
+                    <summary>90分は長すぎませんか？</summary>
                     <div>
-                        <p>もっと歌いたい方のために、教室が自主的なカラオケ会をサポートします。歌仲間同士で集まって、週1ペースで楽しんでいるグループもありますよ。</p>
+                        <p>時間すべて歌ったり踊るわけではございません。おしゃべりタイムもタップリなのであっという間に時間が過ぎるとおっしゃいます。</p>
                     </div>
                 </details>
             </div>
@@ -555,7 +631,7 @@
                     <div class="price-item price-campaign">
                         <h3>体験レッスン</h3>
                         <div class="price-value">
-                            <span class="original-price">1,100円</span>→ 今だけ 0<span>円</span>
+                            → 今だけ 0<span>円</span>
                         </div>
                         <p>(要予約)</p>
                     </div>
@@ -563,43 +639,25 @@
             </div>
         </section>
         
-        <!-- 10. 今すぐ無料体験を予約 -->
-        <section id="form-section" class="form-section">
-            <div class="container fade-in">
-                <div class="form-container">
-                    <img src="https://i.imgur.com/tC7K39W.png" alt="歌って踊れる 青春ポップス ヤマハの教室で" class="form-logo">
-                    <div class="campaign-banner">
-                        ＼ 8月31日まで体験無料キャンペーン実施中！ ／
+        <!-- ▼▼▼ CTAブロック 3 (フッター上) ▼▼▼ -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-wrapper">
+                    <div class="cta-box">
+                        <a href="#" class="cta-button-main">無料体験ご予約</a>
                     </div>
-                    <form action="#" method="POST" onsubmit="alert('お申し込みありがとうございます！スタッフより24時間以内にご連絡いたします。'); return false;">
-                        <div class="form-group">
-                            <label for="name">お名前</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="age">ご年齢</label>
-                            <input type="number" id="age" name="age" min="20" max="99" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="venue">ご希望会場・日程</label>
-                            <select id="venue" name="venue" required>
-                                <option value="">選択してください</option>
-                                <option value="wani_tue">大津わにセンター (第1・3 火 10:00〜)</option>
-                                <option value="katata_thu">堅田サロン教室 (第2・4 木 13:30〜)</option>
-                                <option value="mano_sat">真野カルチャールーム (第1・3 土 14:00〜)</option>
-                                <option value="other">上記以外の日程を相談したい</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="contact">電話番号またはメールアドレス</label>
-                            <input type="text" id="contact" name="contact" required>
-                        </div>
-                        <button type="submit" class="submit-button" id="trial_signup">無料で体験してみる</button>
-                        <p class="form-note">送信後、スタッフより24h以内に日程確定のご連絡を差し上げます。</p>
-                    </form>
+                    <div class="cta-box">
+                        <a href="tel:0740-22-2063" class="phone-button">
+                            <svg class="icon-phone" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            電話でお問い合わせ
+                        </a>
+                        <p class="cta-note">10:30 - 19:30 (月曜定休)</p>
+                    </div>
                 </div>
             </div>
         </section>
+        <!-- ▲▲▲ CTAブロック 3 (フッター上) ▲▲▲ -->
+        
     </main>
 
     <!-- Footer -->
@@ -631,26 +689,16 @@
                 observer.observe(el);
             });
             
-            // Track CTA clicks (for Google Tag Manager simulation)
-            const trackClick = (elementId, eventName) => {
-                const element = document.getElementById(elementId);
-                if(element) {
-                    element.addEventListener('click', () => {
-                        console.log(`Event tracked: ${eventName}`);
-                        // In a real scenario, you would push to dataLayer
-                        // window.dataLayer = window.dataLayer || [];
-                        // window.dataLayer.push({'event': eventName});
-                    });
-                }
-            };
-            
-            document.querySelectorAll('.cta-button').forEach(button => {
-                button.addEventListener('click', () => {
+            document.querySelectorAll('.cta-button, .cta-button-main, .phone-button').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    // Prevent default action for dummy links
+                    if (e.currentTarget.getAttribute('href') === '#') {
+                        e.preventDefault();
+                        alert('予約ページへ移動します。（現在は準備中です）');
+                    }
                     console.log('Event tracked: cta_click');
                 });
             });
-
-            trackClick('trial_signup', 'trial_signup');
         });
     </script>
 
