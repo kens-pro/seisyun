@@ -1,755 +1,1328 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZWDKHLP4T"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta charset="UTF-8">
 
-  gtag('config', 'G-ZZWDKHLP4T');
-</script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ヤマハ青春ポップス 滋賀・高島・大津北エリア | 無料体験会 参加者募集中</title>
-    <meta name="description" content="楽譜ゼロでも大丈夫！エレクトーンの生伴奏で60〜80年代のヒット曲を歌って踊る「ヤマハ青春ポップス」。滋賀・高島・大津北エリアで仲間と一緒に、もう一度青春しませんか？無料体験会実施中！">
-    <meta name="keywords" content="大津 青春ポップス, シニア カラオケレッスン 滋賀, 昭和歌謡 サークル, ヤマハ, 大津市, 堅田, 真野, 和邇">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Google tag (gtag.js)｜参考コードの測定IDを保持 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZWDKHLP4T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZZWDKHLP4T');
+  </script>
 
-    <style>
-        /* CSS Reset & Basic Styles */
-        :root {
-            --color-bg: #fdfaf4; /* クリーム */
-            --color-primary: #e50012; /* ヤマハレッド */
-            --color-secondary: #4DD0E1; /* ターコイズ */
-            --color-accent: #f5a623; /* イエロー */
-            --color-text: #3d3d3d;
-            --color-white: #ffffff;
-            --font-heading: 'Kiwi Maru', serif;
-            --font-body: 'Noto Sans JP', sans-serif;
-        }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ヤマハ青春ポップス | 大人のための歌の教室｜滋賀・高島・大津北エリア</title>
+  <meta name="description" content="50代からの新しい楽しみ。昭和歌謡を歌って、軽く動いて、仲間と笑う。ヤマハ青春ポップス 滋賀・高島・大津北エリアで無料体験受付中。">
+  <meta name="keywords" content="青春ポップス, 昭和歌謡, シニア 歌の教室, 大津市, 高島市, 和邇, 安曇川, ヤマハ">
 
-        html {
-            scroll-behavior: smooth;
-        }
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
 
-        body {
-            font-family: var(--font-body);
-            line-height: 1.8;
-            color: var(--color-text);
-            background-color: var(--color-bg);
-            margin: 0;
-            padding: 0;
-        }
+  <style>
+    :root {
+      /*
+        ▼画像差し替え箇所 01：ヒーロー全面背景
+        推奨：レッスン中に歌っている女性たち、または笑顔のグループ写真
+        推奨比率：横16：縦9以上 / ファイル例：images/hero-seishun-pops.jpg
+      */
+      --hero-image: url("images/group-3P.jpg");
 
-        *, *::before, *::after {
-            box-sizing: border-box;
-        }
+      /*
+        ▼画像差し替え箇所 02：中盤・大きくはみ出す写真
+        推奨：歌っている様子、手拍子、笑顔、先生と参加者の距離感が伝わる写真
+      */
+      --wide-image: url("images/group-5P (1).jpg");
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        
-        section {
-            padding: 60px 0;
-        }
+      /*
+        ▼画像差し替え箇所 03：ステップ・ふりつけ写真
+      */
+      --step-image: url("images/Main.jpg");
 
-        section:nth-of-type(even) {
-            background-color: var(--color-white);
-        }
+      /*
+        ▼画像差し替え箇所 04：映像レッスン写真
+      */
+      --tv-image: url("images/Tv.jpg");
 
-        img {
-            max-width: 100%;
-            height: auto;
-            vertical-align: middle;
-            border-radius: 8px;
-        }
+      --bg: #fff7ef;
+      --bg-soft: #fffdf8;
+      --text: #342b2a;
+      --muted: #756965;
+      --rose: #e95d80;
+      --coral: #ff8a68;
+      --yellow: #ffd36a;
+      --mint: #69d6c3;
+      --blue: #7bc5e8;
+      --deep: #4b3140;
+      --white: #ffffff;
 
-        h1, h2, h3, h4, h5, h6 {
-            font-family: var(--font-heading);
-            font-weight: 500;
-            line-height: 1.4;
-            margin-top: 0;
-        }
+      --serif: "Shippori Mincho", "Noto Serif JP", serif;
+      --body: "Noto Serif JP", serif;
+      --latin: "Inter", sans-serif;
 
-        h2 {
-            font-size: 2.2rem;
-            text-align: center;
-            color: var(--color-primary);
-            margin-bottom: 40px;
-            position: relative;
-            padding-bottom: 15px;
-        }
-        
-        h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
-            border-radius: 2px;
-        }
+      --shadow: 0 30px 80px rgba(75, 49, 64, .16);
+      --soft-shadow: 0 18px 55px rgba(75, 49, 64, .10);
+    }
 
-     /* --- Hero Section --- */
-        .hero {
-            position: relative;
-            height: 80vh;
-            min-height: 500px;
-            display: flex;
-            align-items: flex-end; /* コンテンツを下部に配置 */
-            justify-content: center;
-            text-align: center;
-            color: var(--color-white);
-            background-image: url('images/group-3P.jpg');
-            background-size: cover;
-            background-position: center 30%;
-            padding: 20px;
-        }
+    * {
+      box-sizing: border-box;
+    }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 60%;
-            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); /* 下からグラデーション */
-            z-index: 1;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            padding-bottom: 40px;
-        }
-        
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-        }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 12% 8%, rgba(255, 211, 106, .22), transparent 28%),
+        radial-gradient(circle at 92% 18%, rgba(105, 214, 195, .20), transparent 30%),
+        linear-gradient(180deg, var(--bg), var(--bg-soft) 38%, #fff);
+      font-family: var(--body);
+      line-height: 1.95;
+      letter-spacing: .035em;
+      overflow-x: hidden;
+    }
 
-        .hero-subcopy {
-            font-size: 1.1rem;
-            margin-bottom: 25px;
-            font-weight: normal;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-        }
+    img {
+      display: block;
+      max-width: 100%;
+    }
 
-        .cta-button {
-            display: inline-block;
-            background-color: var(--color-accent); /* ボタンの色を黄色に変更 */
-            color: var(--color-text);
-            padding: 18px 40px;
-            font-size: 1.3rem;
-            font-weight: bold;
-            font-family: var(--font-heading);
-            text-decoration: none;
-            border-radius: 50px;
-            border: 2px solid var(--color-white);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-            transition: transform 0.2s, background-color 0.2s;
-            animation: pulse 2s infinite;
-        }
+    a {
+      color: inherit;
+    }
 
-        .cta-button:hover {
-            transform: scale(1.05);
-            background-color: #ffc107;
-        }
-        
-        .cta-button span {
-            display: block;
-            font-size: 0.8rem;
-            font-family: var(--font-body);
-            margin-top: 5px;
-            font-weight: normal;
-        }
+    .wrap {
+      width: min(1120px, calc(100% - 40px));
+      margin-inline: auto;
+    }
 
-        @keyframes pulse {
-            0% { box-shadow: 0 5px 15px rgba(245, 166, 35, 0.5); }
-            50% { box-shadow: 0 5px 25px rgba(245, 166, 35, 0.8); }
-            100% { box-shadow: 0 5px 15px rgba(245, 166, 35, 0.5); }
-        }
+    .en {
+      font-family: var(--latin);
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      font-size: .72rem;
+      font-weight: 700;
+    }
 
-        /* --- For You Section --- */
-        .for-you ul {
-            list-style: none;
-            padding: 0;
-            max-width: 600px;
-            margin: 0 auto;
-        }
+    .fade {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity .9s ease, transform .9s ease;
+    }
 
-        .for-you li {
-            background: var(--color-white);
-            border-left: 5px solid var(--color-primary);
-            padding: 15px 20px;
-            margin-bottom: 15px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            border-radius: 0 8px 8px 0;
-        }
-        
-        .for-you li::before {
-            content: '✓';
-            color: var(--color-primary);
-            font-weight: bold;
-            margin-right: 10px;
-        }
-        
-        /* --- About Section --- */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
-            align-items: center;
-        }
-        @media (min-width: 768px) {
-            .about-content {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-        
-        .about-box {
-            background: var(--color-bg);
-            border: 2px dashed var(--color-primary);
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-        }
-        
-        .about-box p { font-size: 1.1rem; }
-        .about-box ul { list-style: none; padding: 0; margin: 20px 0; }
-        .about-box ul li { margin-bottom: 10px; }
-        
-        /* --- Charms Section (Cards) --- */
-        .charms-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .charm-card {
-            background: var(--color-white);
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            overflow: hidden;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        
-        .charm-card:hover { transform: translateY(-10px); }
-        .charm-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 0; }
-        .charm-card-content { padding: 20px; }
-        .charm-card h3 { color: var(--color-secondary); font-size: 1.5rem; margin-bottom: 10px; }
+    .fade.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-        /* --- Voices Section --- */
-        .voice {
-            background: var(--color-bg);
-            padding: 25px;
-            border-radius: 10px;
-            margin-bottom: 25px;
-            position: relative;
-            border-top: 5px solid var(--color-primary);
-        }
-        
-        .voice::before {
-            content: '“';
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 6rem;
-            color: var(--color-primary);
-            opacity: 0.1;
-            position: absolute;
-            top: -10px;
-            left: 15px;
-        }
-        .voice p { font-size: 1.1rem; margin-bottom: 15px; }
-        .voice-author { text-align: right; font-weight: bold; color: var(--color-text); }
+    /* =========================
+      HERO
+    ========================= */
 
-        /* --- Schedule Section --- */
-        .schedule-table { width: 100%; border-collapse: collapse; text-align: center; margin-bottom: 20px; }
-        .schedule-table th, .schedule-table td { padding: 15px; border: 1px solid #ddd; }
-        .schedule-table th { background-color: var(--color-primary); color: var(--color-white); font-family: var(--font-body); }
-        .status-good { color: #2e7d32; font-weight: bold; }
-        .schedule-note { text-align: center; font-size: 0.9rem; background-color: var(--color-bg); padding: 15px; border-radius: 8px; }
-        
-        /* --- Flow Section (Timeline) --- */
-        .timeline { position: relative; max-width: 600px; margin: 0 auto; padding-left: 30px; }
-        .timeline::before { content: ''; position: absolute; top: 0; left: 10px; height: 100%; width: 4px; background-color: var(--color-secondary); opacity: 0.3; }
-        .timeline-item { position: relative; margin-bottom: 30px; }
-        .timeline-item:last-child { margin-bottom: 0; }
-        .timeline-item::before { content: ''; position: absolute; top: 5px; left: -28px; width: 20px; height: 20px; border-radius: 50%; background-color: var(--color-secondary); border: 3px solid var(--color-white); }
-        .timeline-item h3 { font-size: 1.3rem; color: var(--color-primary); margin-bottom: 5px; }
-        .timeline-item img { margin-top: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        
-        /* --- FAQ Section --- */
-        .faq details { background: var(--color-white); border: 1px solid #eee; border-radius: 8px; margin-bottom: 10px; padding: 15px 20px; }
-        .faq summary { font-weight: bold; cursor: pointer; font-size: 1.1rem; display: flex; align-items: center; list-style: none; }
-        .faq summary::-webkit-details-marker { display: none; }
-        .faq summary::before { content: 'Q.'; color: var(--color-primary); margin-right: 10px; font-size: 1.2em; }
-        .faq summary::after { content: '+'; margin-left: auto; font-size: 1.5rem; color: var(--color-secondary); transition: transform 0.2s; }
-        .faq details[open] summary::after { transform: rotate(45deg); }
-        .faq div { margin-top: 15px; padding-left: 35px; display: flex; }
-        .faq div::before { content: 'A.'; color: var(--color-secondary); font-weight: bold; margin-right: 10px; font-size: 1.2em; }
+    .hero {
+      min-height: 100svh;
+      position: relative;
+      display: grid;
+      align-items: end;
+      background-image:
+        linear-gradient(90deg, rgba(52, 43, 42, .68) 0%, rgba(52, 43, 42, .36) 42%, rgba(52, 43, 42, .06) 100%),
+        linear-gradient(180deg, rgba(52, 43, 42, .10) 0%, rgba(52, 43, 42, .58) 100%),
+        var(--hero-image);
+      background-size: cover;
+      background-position: center;
+      isolation: isolate;
+      overflow: hidden;
+    }
 
-        /* --- Price Section --- */
-        .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; text-align: center; }
-        .price-item { padding: 20px; border: 2px solid var(--color-secondary); border-radius: 10px; }
-        .price-item h3 { color: var(--color-secondary); margin-bottom: 10px; }
-        .price-item .price-value { font-size: 2rem; font-weight: bold; color: var(--color-primary); }
-        .price-item .price-value span { font-size: 1rem; font-weight: normal; }
-        .price-campaign { grid-column: 1 / -1; background: linear-gradient(45deg, var(--color-primary), var(--color-accent)); color: var(--color-white); border: none; padding: 30px; }
-        .price-campaign .price-value { color: var(--color-white); text-shadow: 1px 1px 3px rgba(0,0,0,0.2); }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -8vw -14vh auto;
+      width: 42vw;
+      height: 42vw;
+      min-width: 360px;
+      min-height: 360px;
+      background: radial-gradient(circle, rgba(255, 211, 106, .55), rgba(233, 93, 128, .18) 45%, transparent 70%);
+      border-radius: 999px;
+      z-index: -1;
+    }
 
-        /* --- Footer --- */
-        .footer { background-color: var(--color-text); color: #ccc; text-align: center; padding: 40px 20px; }
-        .footer p { margin: 0; font-size: 1.2rem; font-family: var(--font-heading); color: var(--color-white); margin-bottom: 20px; }
-        .footer .copyright { font-size: 0.8rem; font-family: var(--font-body); color: #aaa; }
-        
-        /* --- Fade-in Animation --- */
-        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .hero__inner {
+      width: min(1180px, calc(100% - 36px));
+      margin-inline: auto;
+      padding: 18vh 0 11vh;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+      gap: 5vw;
+      align-items: end;
+    }
 
-        /* --- CTA Block Styles (Re-designed for 2 buttons) --- */
-        .cta-section {
-            padding: 40px 0;
-            background-color: transparent;
-        }
-        .cta-wrapper {
-            background-color: var(--color-white);
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
-            display: flex;
-            flex-direction: column; /* Mobile-first: start as a column */
-            align-items: center;
-            gap: 25px;
-        }
-        /* On wider screens, switch to a row layout */
-        @media (min-width: 768px) {
-            .cta-wrapper {
-                flex-direction: row;
-                justify-content: space-around;
-                align-items: flex-start; /* Align items to the top */
-            }
-        }
-        .cta-box {
-            text-align: center;
-            width: 100%;
-            max-width: 320px;
-        }
-        /* Base styles for both buttons to ensure same height */
-        .cta-button-main, .phone-button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            padding: 16px 20px; /* Vertical padding is key */
-            min-height: 58px; /* Enforce minimum height */
-            font-size: 1.2rem;
-            font-weight: bold;
-            font-family: var(--font-heading);
-            text-decoration: none;
-            border-radius: 50px;
-            box-sizing: border-box;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .cta-button-main:hover, .phone-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-        }
-        /* Specific style for Web Reservation Button */
-        .cta-button-main {
-            background-color: var(--color-accent);
-            color: var(--color-text);
-        }
-        /* Specific style for Phone Button */
-        .phone-button {
-            background-color: #28a745;
-            color: var(--color-white);
-        }
-        .phone-button .icon-phone {
-            margin-right: 10px;
-        }
-        .cta-note {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            color: var(--color-text);
-            line-height: 1.5;
-        }
+    .hero__copy {
+      transform: translateX(5vw);
+      max-width: 720px;
+      color: var(--white);
+    }
 
-        /* --- Responsive Design --- */
-        @media (max-width: 768px) {
-            .container { padding: 30px 15px; }
-            section { padding: 40px 0; }
-            .hero { height: 70vh; min-height: 450px; background-position: center 20%; }
-            .hero h1 { font-size: 1.8rem; }
-            .hero-subcopy { font-size: 1rem; }
-            .cta-button { padding: 15px 30px; font-size: 1.1rem; }
-            h2 { font-size: 1.8rem; }
-            .schedule-table { font-size: 0.9rem; }
-            .schedule-table th, .schedule-table td { padding: 8px; }
-        }
-        /* --- Video Section --- */
-.video-section .video-wrapper{
-  position: relative;
-  aspect-ratio: 16 / 9;      /* CLS対策：高さを先に確保 */
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-}
-.video-section iframe{
-  position: absolute; inset: 0;
-  width: 100%; height: 100%;
-  border: 0; display: block;
-}
-.video-caption{
-  text-align: center;
-  font-size: .95rem;
-  color: #666;
-  margin-top: 10px;
-}
+    .hero__label {
+      display: inline-flex;
+      gap: .8em;
+      align-items: center;
+      margin-bottom: 22px;
+      color: rgba(255,255,255,.84);
+    }
 
-    </style>
+    .hero__label::before {
+      content: "";
+      width: 56px;
+      height: 1px;
+      background: rgba(255,255,255,.72);
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.55rem, 7vw, 6.2rem);
+      line-height: 1.08;
+      letter-spacing: .05em;
+      margin: 0;
+      text-shadow: 0 8px 40px rgba(0,0,0,.28);
+    }
+
+    .hero h1 span {
+      display: block;
+      margin-left: .58em;
+    }
+
+    .hero__lead {
+      max-width: 560px;
+      margin: 28px 0 0;
+      font-size: clamp(1rem, 1.7vw, 1.2rem);
+      color: rgba(255,255,255,.92);
+    }
+
+    .hero__note {
+      justify-self: end;
+      margin-bottom: 2vh;
+      width: min(100%, 360px);
+      padding: 28px 30px;
+      background: rgba(255, 253, 248, .86);
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow);
+      color: var(--deep);
+      transform: translateY(26px);
+    }
+
+    .hero__note p {
+      margin: 0;
+      font-size: 1.05rem;
+      line-height: 1.9;
+    }
+
+    .hero__note strong {
+      font-size: 1.55rem;
+      line-height: 1.45;
+      font-weight: 500;
+    }
+
+    .scroll-mark {
+      position: absolute;
+      left: 28px;
+      bottom: 32px;
+      writing-mode: vertical-rl;
+      color: rgba(255,255,255,.68);
+      font-family: var(--latin);
+      font-size: .68rem;
+      letter-spacing: .24em;
+    }
+
+    /* =========================
+      CTA
+    ========================= */
+
+    .quiet-cta {
+      position: relative;
+      z-index: 3;
+      margin-top: -34px;
+    }
+
+    .quiet-cta__box {
+      width: min(860px, calc(100% - 34px));
+      margin-inline: auto;
+      background: var(--white);
+      box-shadow: var(--shadow);
+      padding: 24px 28px;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .quiet-cta__text {
+      font-size: .96rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .quiet-cta__actions {
+      display: flex;
+      gap: 12px;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 13px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-family: var(--latin);
+      font-weight: 700;
+      letter-spacing: .08em;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn--main {
+      background: linear-gradient(135deg, var(--rose), var(--coral));
+      color: var(--white);
+      box-shadow: 0 14px 32px rgba(233, 93, 128, .28);
+    }
+
+    .btn--sub {
+      background: #fff4da;
+      color: var(--deep);
+      border: 1px solid rgba(75,49,64,.12);
+    }
+
+    .btn small {
+      display: block;
+      margin-left: 8px;
+      font-family: var(--body);
+      font-size: .72rem;
+      letter-spacing: .04em;
+      font-weight: 500;
+      opacity: .84;
+    }
+
+    /* =========================
+      INTRO
+    ========================= */
+
+    .intro {
+      padding: 120px 0 84px;
+    }
+
+    .intro__grid {
+      display: grid;
+      grid-template-columns: .92fr 1.08fr;
+      gap: 6vw;
+      align-items: center;
+    }
+
+    .section-kicker {
+      color: var(--rose);
+      margin-bottom: 18px;
+    }
+
+    .intro h2,
+    .poem h2,
+    .lesson h2,
+    .schedule h2,
+    .movie h2,
+    .final h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4.6vw, 4.1rem);
+      line-height: 1.25;
+      letter-spacing: .08em;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    .intro h2 span {
+      display: block;
+      margin-left: 1.6em;
+    }
+
+    .intro__text {
+      margin: 34px 0 0;
+      max-width: 510px;
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+
+    .intro__photo {
+      position: relative;
+      min-height: 520px;
+    }
+
+    .intro__photo-main {
+      position: absolute;
+      right: -12vw;
+      top: 20px;
+      width: min(720px, 58vw);
+      height: 460px;
+      background: var(--wide-image) center / cover no-repeat;
+      box-shadow: var(--shadow);
+    }
+
+    .intro__photo-main::after {
+      content: "歌うたび、\A少しずつ\A私に戻る。";
+      white-space: pre-line;
+      position: absolute;
+      left: -84px;
+      bottom: -42px;
+      width: 210px;
+      padding: 28px 24px;
+      background: rgba(255, 255, 255, .9);
+      color: var(--deep);
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      line-height: 1.65;
+      box-shadow: var(--soft-shadow);
+    }
+
+    .intro__dot {
+      position: absolute;
+      left: 15%;
+      bottom: 6px;
+      width: 138px;
+      height: 138px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--yellow), var(--mint));
+      opacity: .85;
+      z-index: -1;
+    }
+
+    /* =========================
+      POEM
+    ========================= */
+
+    .poem {
+      padding: 88px 0 126px;
+      position: relative;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.74), rgba(255,255,255,.15)),
+        radial-gradient(circle at 86% 24%, rgba(123,197,232,.20), transparent 34%);
+      overflow: hidden;
+    }
+
+    .poem__grid {
+      display: grid;
+      grid-template-columns: 1fr .76fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .poem__lines {
+      margin-top: 56px;
+      display: grid;
+      gap: 28px;
+      max-width: 650px;
+    }
+
+    .poem__line {
+      font-size: clamp(1.15rem, 2vw, 1.7rem);
+      line-height: 1.85;
+      margin: 0;
+    }
+
+    .poem__line:nth-child(2) {
+      margin-left: 16%;
+    }
+
+    .poem__line:nth-child(3) {
+      margin-left: 5%;
+      color: var(--rose);
+    }
+
+    .poem__image {
+      position: relative;
+      margin-top: -20px;
+      min-height: 540px;
+    }
+
+    .poem__image-a,
+    .poem__image-b {
+      position: absolute;
+      background-size: cover;
+      background-position: center;
+      box-shadow: var(--shadow);
+    }
+
+    .poem__image-a {
+      inset: 0 auto auto 0;
+      width: 88%;
+      height: 360px;
+      background-image: var(--step-image);
+    }
+
+    .poem__image-b {
+      right: -12vw;
+      bottom: 0;
+      width: 72%;
+      height: 280px;
+      background-image: var(--tv-image);
+      border: 12px solid var(--bg-soft);
+    }
+
+    .poem__float {
+      position: absolute;
+      right: 6vw;
+      top: 18px;
+      font-family: var(--latin);
+      font-weight: 700;
+      letter-spacing: .18em;
+      color: rgba(233,93,128,.16);
+      font-size: clamp(3rem, 11vw, 9rem);
+      line-height: 1;
+      z-index: -1;
+    }
+
+    /* =========================
+      LESSON
+    ========================= */
+
+    .lesson {
+      padding: 118px 0 100px;
+    }
+
+    .lesson__head {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 70px;
+      align-items: end;
+    }
+
+    .lesson__lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.02rem;
+      max-width: 520px;
+    }
+
+    .lesson__sequence {
+      margin-top: 70px;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr 1fr;
+      gap: 0;
+      align-items: stretch;
+    }
+
+    .lesson__panel {
+      min-height: 310px;
+      padding: 46px 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .lesson__panel:nth-child(1) {
+      background: #fff;
+      transform: translateY(28px);
+      box-shadow: var(--soft-shadow);
+    }
+
+    .lesson__panel:nth-child(2) {
+      background: linear-gradient(135deg, rgba(255, 211, 106, .65), rgba(255, 138, 104, .28));
+      min-height: 380px;
+    }
+
+    .lesson__panel:nth-child(3) {
+      background: var(--deep);
+      color: var(--white);
+      transform: translateY(-22px);
+    }
+
+    .lesson__num {
+      position: absolute;
+      top: 26px;
+      left: 30px;
+      font-family: var(--latin);
+      font-size: .78rem;
+      letter-spacing: .2em;
+      opacity: .55;
+    }
+
+    .lesson__panel h3 {
+      font-family: var(--serif);
+      font-size: clamp(1.45rem, 2.5vw, 2.2rem);
+      line-height: 1.35;
+      margin: 0 0 16px;
+      font-weight: 500;
+    }
+
+    .lesson__panel p {
+      margin: 0;
+      color: inherit;
+      opacity: .78;
+      font-size: .96rem;
+    }
+
+    /* =========================
+      MOVIE
+    ========================= */
+
+    .movie {
+      padding: 70px 0 120px;
+    }
+
+    .movie__grid {
+      display: grid;
+      grid-template-columns: .72fr 1.28fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .movie__copy p {
+      color: var(--muted);
+      margin-top: 26px;
+    }
+
+    .video-frame {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: #111;
+    }
+
+    .video-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-caption {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: .88rem;
+      text-align: right;
+    }
+
+    /* =========================
+      SCHEDULE
+    ========================= */
+
+    .schedule {
+      padding: 112px 0 120px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.8), rgba(255,247,239,.9)),
+        radial-gradient(circle at 14% 20%, rgba(105,214,195,.20), transparent 34%);
+    }
+
+    .schedule__grid {
+      margin-top: 54px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .place {
+      background: rgba(255,255,255,.78);
+      box-shadow: var(--soft-shadow);
+      padding: 38px 36px;
+      position: relative;
+    }
+
+    .place:nth-child(1) {
+      margin-top: 34px;
+    }
+
+    .place:nth-child(2) {
+      transform: translateY(-18px);
+    }
+
+    .place::before {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      border: 1px solid rgba(75,49,64,.12);
+      pointer-events: none;
+    }
+
+    .place__area {
+      color: var(--rose);
+      margin-bottom: 14px;
+    }
+
+    .place h3 {
+      font-family: var(--serif);
+      font-size: clamp(1.45rem, 2.6vw, 2.15rem);
+      line-height: 1.35;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    .place__time {
+      font-size: 1.22rem;
+      margin: 24px 0 10px;
+      color: var(--deep);
+    }
+
+    .place__meta {
+      margin: 0;
+      color: var(--muted);
+      font-size: .94rem;
+    }
+
+    .place__status {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: #fff1c5;
+      color: var(--deep);
+      font-size: .9rem;
+    }
+
+    .price-note {
+      width: min(720px, 100%);
+      margin: 52px 0 0 auto;
+      padding: 34px 38px;
+      background: var(--deep);
+      color: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .price-note p {
+      margin: 0;
+    }
+
+    .price-note strong {
+      font-size: 1.38rem;
+      font-weight: 500;
+    }
+
+    .price-note span {
+      color: var(--yellow);
+    }
+
+    /* =========================
+      FAQ
+    ========================= */
+
+    .faq {
+      padding: 100px 0 86px;
+    }
+
+    .faq__wrap {
+      width: min(860px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .faq__title {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3.5vw, 3rem);
+      font-weight: 500;
+      line-height: 1.3;
+      margin: 0 0 36px;
+    }
+
+    details {
+      border-top: 1px solid rgba(75,49,64,.18);
+      padding: 22px 0;
+    }
+
+    details:last-child {
+      border-bottom: 1px solid rgba(75,49,64,.18);
+    }
+
+    summary {
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: center;
+      font-size: 1.08rem;
+      color: var(--deep);
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "＋";
+      font-family: var(--latin);
+      color: var(--rose);
+      font-weight: 700;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    details p {
+      margin: 18px 0 0;
+      color: var(--muted);
+      max-width: 680px;
+    }
+
+    /* =========================
+      FINAL
+    ========================= */
+
+    .final {
+      position: relative;
+      padding: 126px 0 0;
+      overflow: hidden;
+      background: var(--deep);
+      color: var(--white);
+    }
+
+    .final::before {
+      content: "";
+      position: absolute;
+      right: -18vw;
+      top: -14vw;
+      width: 52vw;
+      height: 52vw;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(255, 211, 106, .30), rgba(233, 93, 128, .18) 48%, transparent 72%);
+    }
+
+    .final__grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 58px;
+      align-items: end;
+      position: relative;
+      z-index: 2;
+    }
+
+    .final h2 {
+      color: var(--white);
+    }
+
+    .final__text {
+      margin-top: 34px;
+      color: rgba(255,255,255,.78);
+      max-width: 560px;
+      font-size: 1.03rem;
+    }
+
+    .final__photo {
+      height: 520px;
+      background: var(--wide-image) center / cover no-repeat;
+      transform: translateX(7vw);
+      box-shadow: 0 30px 90px rgba(0,0,0,.28);
+    }
+
+    .final__cta {
+      margin-top: 40px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .final__cta .btn--sub {
+      background: rgba(255,255,255,.12);
+      color: var(--white);
+      border-color: rgba(255,255,255,.24);
+    }
+
+    .footer {
+      margin-top: 90px;
+      padding: 34px 20px;
+      background: rgba(0,0,0,.18);
+      text-align: center;
+      color: rgba(255,255,255,.62);
+      font-size: .86rem;
+    }
+
+    /* =========================
+      RESPONSIVE
+    ========================= */
+
+    @media (max-width: 900px) {
+      .hero__inner,
+      .intro__grid,
+      .poem__grid,
+      .lesson__head,
+      .movie__grid,
+      .schedule__grid,
+      .final__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero__copy {
+        transform: translateX(0);
+      }
+
+      .hero__note {
+        justify-self: start;
+        transform: translateY(0);
+        margin-top: 34px;
+      }
+
+      .quiet-cta__box {
+        grid-template-columns: 1fr;
+      }
+
+      .quiet-cta__actions {
+        justify-content: flex-start;
+      }
+
+      .intro {
+        padding-top: 92px;
+      }
+
+      .intro__photo {
+        min-height: 420px;
+      }
+
+      .intro__photo-main {
+        right: -7vw;
+        width: 92vw;
+        height: 360px;
+      }
+
+      .intro__photo-main::after {
+        left: 20px;
+        bottom: -58px;
+      }
+
+      .poem__image-b {
+        right: -4vw;
+      }
+
+      .lesson__sequence {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .lesson__panel,
+      .lesson__panel:nth-child(1),
+      .lesson__panel:nth-child(3) {
+        transform: none;
+        min-height: 260px;
+      }
+
+      .place:nth-child(1),
+      .place:nth-child(2) {
+        margin-top: 0;
+        transform: none;
+      }
+
+      .final__photo {
+        transform: translateX(0);
+        height: 380px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .wrap {
+        width: min(100% - 28px, 1120px);
+      }
+
+      .hero {
+        min-height: 92svh;
+        background-position: center;
+      }
+
+      .hero__inner {
+        padding: 16vh 0 9vh;
+      }
+
+      .hero h1 span {
+        margin-left: 0;
+      }
+
+      .hero__lead {
+        margin-top: 22px;
+      }
+
+      .hero__note {
+        padding: 22px;
+      }
+
+      .scroll-mark {
+        display: none;
+      }
+
+      .quiet-cta {
+        margin-top: 0;
+      }
+
+      .quiet-cta__box {
+        width: 100%;
+        padding: 24px 18px;
+        box-shadow: none;
+      }
+
+      .quiet-cta__actions,
+      .final__cta {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .intro,
+      .poem,
+      .lesson,
+      .movie,
+      .schedule,
+      .faq,
+      .final {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .intro__photo-main::after {
+        width: 184px;
+        font-size: 1.08rem;
+      }
+
+      .poem__line:nth-child(2),
+      .poem__line:nth-child(3) {
+        margin-left: 0;
+      }
+
+      .poem__image {
+        min-height: 430px;
+      }
+
+      .poem__image-a {
+        width: 92%;
+        height: 280px;
+      }
+
+      .poem__image-b {
+        width: 78%;
+        height: 220px;
+      }
+
+      .place {
+        padding: 34px 24px;
+      }
+
+      .price-note {
+        padding: 28px 24px;
+      }
+
+      .final__photo {
+        height: 300px;
+      }
+
+      .footer {
+        margin-top: 64px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-    <!-- 1. Hero Section -->
-    <header class="hero">
-        <div class="hero-content">
-            <h1>♪ もう一度、あの頃の歌を ─<br>湖畔でよみがえる私たちの青春 ♪</h1>
-            <p class="hero-subcopy">
-                「カラオケ以上、レッスン未満」だから、楽譜ゼロでも大丈夫。<br>90分の“ライブ感”をエレクトーン生伴奏で！
-            </p>
-            </div>
-    </header>
+  <header class="hero">
+    <div class="scroll-mark">SCROLL</div>
 
-    <!-- ▼▼▼ CTAブロック 1 (冒頭) ▼▼▼ -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-wrapper">
-                <div class="cta-box">
-                    <a href="https://www.toriimusic.co.jp/7632/" class="cta-button-main">無料体験ご予約</a>
-                </div>
-                <div class="cta-box">
-                    <a href="tel:0740-22-2063" class="phone-button">
-                        <svg class="icon-phone" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                        電話でお問い合わせ
-                    </a>
-                    <p class="cta-note">10:30 - 19:30 (月曜定休)</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ▲▲▲ CTAブロック 1 (冒頭) ▲▲▲ -->
+    <div class="hero__inner">
+      <div class="hero__copy">
+        <div class="hero__label en">Yamaha Seishun Pops</div>
+        <h1>
+          あの頃の歌が、<span>今の私を起こしてくれる。</span>
+        </h1>
+        <p class="hero__lead">
+          昭和歌謡を、仲間と歌う。少し動く。少し笑う。<br>
+          いつの間にか、心まで軽くなる大人の歌の時間です。
+        </p>
+      </div>
 
-    <main>
-        <!-- 2. こんなあなたに -->
-        <section class="for-you">
-            <div class="container fade-in">
-                <h2>こんなあなたに</h2>
-                <ul>
-                    <li>子育ても仕事もひと区切り、「今度は私の番」と感じている 45〜70 代</li>
-                    <li>カラオケが好きだけど一人で行くのは…とためらっていた方</li>
-                    <li>仲間づくりをしたい・運動不足を解消したいアクティブシニア</li>
-                    <li>介護やパートナーの喪失を乗り越え、心の張り合いを探している方</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- 3. 青春ポップスとは？ -->
-        <section class="about">
-            <div class="container fade-in">
-                <h2>青春ポップスとは？</h2>
-                <div class="about-content">
-                    <img src="images/group-5P (1).jpg" alt="エレクトーンの生伴奏で楽しく歌うレッスン風景">
-                    <div class="about-box">
-                        <p>1960〜80年代のヒット曲を<br>歌って・踊って・ハモって楽しむヤマハの大人向け新プログラム</p>
-                        <ul>
-                            <li>月2回／1回90分。ストレッチ・発声 → 映像レッスン → エレクトーン伴奏で合唱</li>
-                            <li>全100曲以上から毎回曲をセレクト。ハモリは映像でレクチャー</li>
-                            <li>入会金 2,200円・月会費 4,070円〜（税込）教材不要</li>
-                        </ul>
-                        </div>
-                </div>
-            </div>
-        </section>
-<!-- 3.5 動画セクション -->
-<section class="video-section">
-  <div class="container fade-in">
-    <h2>動画で見る：青春ポップス</h2>
-    <div class="video-wrapper">
-      <iframe
-        src="https://www.youtube-nocookie.com/embed/WBuT2JIN__A?rel=0&modestbranding=1&playsinline=1"
-        title="ヤマハ青春ポップス 紹介動画"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen>
-      </iframe>
+      <div class="hero__note">
+        <p>
+          <strong>歌が上手い人の場所、ではありません。</strong><br>
+          もう一度、自分の楽しみを持ちたい人のための場所です。
+        </p>
+      </div>
     </div>
-    <p class="video-caption">※ 音量にご注意ください。</p>
-  </div>
-</section>
+  </header>
 
-        <!-- 4. ３つの魅力 -->
-        <section class="charms">
-            <div class="container fade-in">
-                <h2>３つの魅力</h2>
-                <div class="charms-grid">
-                    <div class="charm-card">
-                        <img src="images/group-5P (1).jpg" alt="女性が楽しそうに歌っている">
-                        <div class="charm-card-content">
-                            <h3>懐かしさで若返る</h3>
-                            <p>「心の旅」「卒業写真」…<br>歌い出した瞬間にタイムスリップ</p>
-                        </div>
-                    </div>
-                    <div class="charm-card">
-                        <img src="images/group-3P.jpg" alt="3人の仲間が楽しそうに歌っている">
-                        <div class="charm-card-content">
-                            <h3>仲間ができる</h3>
-                            <p>レッスン後は近くの喫茶店で“青春カフェタイム”。自然に輪が広がります。</p>
-                        </div>
-                    </div>
-                    <div class="charm-card">
-                        <img src="images/Main.jpg" alt="ステップを踏むレッスン">                    
-                        <div class="charm-card-content">
-                            <h3>健康 & ストレス発散</h3>
-                            <p>大きな声＋軽いステップで有酸素運動。月２回の“元気補給日”</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- 5. 参加者の声 -->
-        <section class="voices">
-            <div class="container fade-in">
-                <h2>参加者の声</h2>
-                <div class="voice">
-                    <p>「レッスン日が待ち遠しくて、昔より姿勢も良くなった気がします！」</p>
-                    <div class="voice-author">— まゆみさん（63・堅田）</div>
-                </div>
-                <div class="voice">
-                    <p>「夫婦で参加。家でもハモリの練習が会話のネタに！」</p>
-                    <div class="voice-author">— 健治さん（58・真野）</div>
-                </div>
-                <div class="voice">
-                    <p>「親の介護明けで心が空っぽでしたが、歌うたびに元気が戻りました」</p>
-                    <div class="voice-author">— 佳代さん（67・志賀）</div>
-                </div>
-            </div>
-        </section>
+  <section class="quiet-cta" aria-label="体験予約">
+    <div class="quiet-cta__box">
+      <p class="quiet-cta__text">
+        まずは一度、教室の空気を見に来てください。体験レッスン受付中です。
+      </p>
+      <div class="quiet-cta__actions">
+        <a href="https://www.toriimusic.co.jp/7632/" class="btn btn--main js-track" data-label="first_reserve">無料体験ご予約</a>
+        <a href="tel:0740-22-2063" class="btn btn--sub js-track" data-label="first_tel">電話で相談 <small>10:30-19:30</small></a>
+      </div>
+    </div>
+  </section>
 
-        <!-- 6. 開講クラス & スケジュール -->
-        <section class="schedule">
-            <div class="container fade-in">
-                <h2>開講クラス & スケジュール</h2>
-                <div style="overflow-x:auto;">
-                    <table class="schedule-table">
-                        <thead>
-                            <tr>
-                                <th>会場</th>
-                                <th>曜日・時間</th>
-                                <th>定員</th>
-                                <th>ステータス</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>サウンドステーションあどがわ</td>
-                                <td>金曜日 14:00〜15:30</td>
-                                <td>8名</td>
-                                <td><span class="status-good">◎ 体験受付中</span></td>
-                            </tr>
-                            <tr>
-                                <td>大津わにセンター</td>
-                                <td>水曜日 13:00〜14:30</td>
-                                <td>8名</td>
-                                <td><span class="status-good">◎ 体験受付中</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p class="schedule-note">※ 駐車場有　SS安曇川は平和堂あどがわ店内/大津わにセンターはJR湖西線「和邇」駅正面徒歩1分。</p>
-            </div>
-        </section>
+  <main>
 
-        <!-- 7. 体験レッスンの流れ -->
-        <section class="flow">
-            <div class="container fade-in">
-                <h2>体験レッスンの流れ</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <h3>待合室で受付</h3>
-                        <p>まずはリラックス。教室係がエスコートします。</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>ウォームアップストレッチ</h3>
-                        <p>体をほぐして、声を出しやすい状態に整えます。</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>発声練習</h3>
-                        <p>簡単な発声練習で、音楽の世界へ！</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>ステップ（月1回）</h3>
-                        <p>スター気分で楽しくステップ</p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>メイン曲を映像で習得</h3>
-                        <p>懐かしのヒット曲を映像に合わせて楽しく練習。ハモリにも挑戦！</p>
-                        <img src="images/Tv.jpg" alt="歌詞テロップと振り付けが表示されたレッスン用映像">
-                    </div>
-                    <div class="timeline-item">
-                        <h3>おしゃべりタイム</h3>
-                        <p>ストレッチや合唱の合間の楽しいおしゃべりが特長です。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ▼▼▼ CTAブロック 2 (中盤) ▼▼▼ -->
-        <section class="cta-section">
-            <div class="container">
-                <div class="cta-wrapper">
-                    <div class="cta-box">
-                        <a href="https://www.toriimusic.co.jp/7632/" class="cta-button-main">無料体験ご予約</a>
-                    </div>
-                    <div class="cta-box">
-                        <a href="tel:0740-22-2063" class="phone-button">
-                            <svg class="icon-phone" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                            電話でお問い合わせ
-                        </a>
-                        <p class="cta-note">10:30 - 19:30 (月曜定休)</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ▲▲▲ CTAブロック 2 (中盤) ▲▲▲ -->
-
-        <!-- 8. よくある質問 (FAQ) -->
-        <section class="faq">
-            <div class="container fade-in">
-                <h2>よくある質問</h2>
-                <details>
-                    <summary>高いキーが出ません…</summary>
-                    <div>
-                        <p>ご安心ください。ご自身の歌いやすいパートで無理なく楽しめます。</p>
-                    </div>
-                </details>
-                <details>
-                    <summary>振り付けが難しくて不安</summary>
-                    <div>
-                        <p>簡単振り付けで安心。もし難しいとお感じならできるところだけでもＯＫ！イスに座ったままのご参加ももちろんOKです。</p>
-                    </div>
-                </details>
-                <details>
-                    <summary>90分は長すぎませんか？</summary>
-                    <div>
-                        <p>時間すべて歌ったり踊るわけではございません。おしゃべりタイムもタップリなのであっという間に時間が過ぎるとおっしゃいます。</p>
-                    </div>
-                </details>
-            </div>
-        </section>
-
-        <!-- 9. 料金プラン -->
-        <section class="price">
-            <div class="container fade-in">
-                <h2>料金プラン</h2>
-                <div class="price-grid">
-                    <div class="price-item">
-                        <h3>入会金</h3>
-                        <div class="price-value">2,200<span>円</span></div>
-                        <p>(税込)</p>
-                    </div>
-                    <div class="price-item">
-                        <h3>月会費</h3>
-                        <div class="price-value">4,070<span>円〜</span></div>
-                        <p>(平日クラス)<br>土日クラス: 4,400円</p>
-                    </div>
-                    <div class="price-item price-campaign">
-                        <h3>体験レッスン</h3>
-                        <div class="price-value">
-                            → 今だけ 0<span>円</span>
-                        </div>
-                        <p>(要予約)</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- ▼▼▼ CTAブロック 3 (フッター上) ▼▼▼ -->
-        <section class="cta-section">
-            <div class="container">
-                <div class="cta-wrapper">
-                    <div class="cta-box">
-                        <a href="https://www.toriimusic.co.jp/7632/" class="cta-button-main">無料体験ご予約</a>
-                    </div>
-                    <div class="cta-box">
-                        <a href="tel:0740-22-2063" class="phone-button">
-                            <svg class="icon-phone" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                            電話でお問い合わせ
-                        </a>
-                        <p class="cta-note">10:30 - 19:30 (月曜定休)</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ▲▲▲ CTAブロック 3 (フッター上) ▲▲▲ -->
-        
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>“懐かしいあのメロディーが、<br>これからの毎日にリズムをつけてくれる。”</p>
-        <div class="copyright">
-            高島・大津北の仲間と一緒に、あなたの新しい青春を始めましょう！<br>
-            &copy; 2024 ヤマハ青春ポップス 高島・大津北エリア.
+    <section class="intro">
+      <div class="wrap intro__grid fade">
+        <div>
+          <div class="section-kicker en">Second Season</div>
+          <h2>
+            家族のために<br>
+            走ってきた人へ。<span>今度は、私の番。</span>
+          </h2>
+          <p class="intro__text">
+            子育て、仕事、家のこと。<br>
+            誰かを優先してきた時間は、きっと大切な時間でした。<br><br>
+            でも、これからの毎日に、少しだけ自分の歌を戻してもいい。<br>
+            ひとりではなく、同じ時代の歌を知っている仲間と一緒に。
+          </p>
         </div>
-    </footer>
 
-    <script>
-        // JavaScript for fade-in animation on scroll
-        document.addEventListener('DOMContentLoaded', () => {
-            const fadeInElements = document.querySelectorAll('.fade-in');
+        <div class="intro__photo" aria-hidden="true">
+          <div class="intro__photo-main"></div>
+          <div class="intro__dot"></div>
+        </div>
+      </div>
+    </section>
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.1
-            });
+    <section class="poem">
+      <div class="poem__float">POPS</div>
 
-            fadeInElements.forEach(el => {
-                observer.observe(el);
-            });
-            
-            document.querySelectorAll('.cta-button, .cta-button-main, .phone-button').forEach(button => {
-                button.addEventListener('click', (e) => {
-                    // Prevent default action for dummy links
-                    if (e.currentTarget.getAttribute('href') === '#') {
-                        e.preventDefault();
-                        alert('予約ページへ移動します。（現在は準備中です）');
-                    }
-                    console.log('Event tracked: cta_click');
-                });
-            });
+      <div class="wrap poem__grid fade">
+        <div>
+          <div class="section-kicker en">Not a lesson, but a room</div>
+          <h2>
+            懐かしい曲は、<br>
+            ただ懐かしいだけじゃない。
+          </h2>
+
+          <div class="poem__lines">
+            <p class="poem__line">
+              口ずさんだ瞬間、<br>
+              忘れていた景色が戻ってくる。
+            </p>
+            <p class="poem__line">
+              手拍子が合うと、<br>
+              初めて会った人とも笑えてしまう。
+            </p>
+            <p class="poem__line">
+              あこがれの曲とふりつけを、<br>
+              今の私で、もう一度。
+            </p>
+          </div>
+        </div>
+
+        <div class="poem__image" aria-label="レッスン風景写真">
+          <div class="poem__image-a"></div>
+          <div class="poem__image-b"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lesson">
+      <div class="wrap">
+        <div class="lesson__head fade">
+          <div>
+            <div class="section-kicker en">How it feels</div>
+            <h2>楽譜が読めなくても、声に自信がなくても。</h2>
+          </div>
+          <p class="lesson__lead">
+            青春ポップスは、楽譜を見て難しく歌う教室ではありません。<br>
+            映像を見ながら、エレクトーンの伴奏に合わせて、自然に声と体を動かしていきます。
+          </p>
+        </div>
+
+        <div class="lesson__sequence fade">
+          <article class="lesson__panel">
+            <div class="lesson__num">01</div>
+            <h3>体をほぐす。</h3>
+            <p>まずは深呼吸。肩の力が抜けると、声も少しずつ出やすくなります。</p>
+          </article>
+
+          <article class="lesson__panel">
+            <div class="lesson__num">02</div>
+            <h3>映像で覚える。</h3>
+            <p>歌詞も、ハモリも、ふりつけも。見ながらなので、気負わず参加できます。</p>
+          </article>
+
+          <article class="lesson__panel">
+            <div class="lesson__num">03</div>
+            <h3>みんなで合わせる。</h3>
+            <p>ひとりの声が、みんなの声になる。その瞬間が、少しだけ若返る時間です。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="movie">
+      <div class="wrap movie__grid fade">
+        <div class="movie__copy">
+          <div class="section-kicker en">Watch the atmosphere</div>
+          <h2>空気は、動画で少し伝わります。</h2>
+          <p>
+            でも本当の楽しさは、同じ部屋で声が重なったときにわかります。<br>
+            まずは雰囲気だけ、のぞいてみてください。
+          </p>
+        </div>
+
+        <div>
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/WBuT2JIN__A?rel=0&modestbranding=1&playsinline=1"
+              title="ヤマハ青春ポップス 紹介動画"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <p class="video-caption">※ 音量にご注意ください。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="schedule">
+      <div class="wrap fade">
+        <div class="section-kicker en">Class information</div>
+        <h2>近くの教室で、<br>月に二度の楽しみを。</h2>
+
+        <div class="schedule__grid">
+          <article class="place">
+            <div class="place__area en">Takashima</div>
+            <h3>サウンドステーションあどがわ</h3>
+            <p class="place__time">金曜日 14:00〜15:30</p>
+            <p class="place__meta">
+              平和堂あどがわ店内。お買い物のついでにも通いやすい会場です。
+            </p>
+            <span class="place__status">体験受付中</span>
+          </article>
+
+          <article class="place">
+            <div class="place__area en">Otsu North</div>
+            <h3>大津わにセンター</h3>
+            <p class="place__time">水曜日 13:00〜14:30</p>
+            <p class="place__meta">
+              JR湖西線「和邇」駅正面徒歩1分。駐車場もございます。
+            </p>
+            <span class="place__status">体験受付中</span>
+          </article>
+        </div>
+
+        <div class="price-note">
+          <p>
+            <strong>体験レッスン <span>0円</span></strong><br>
+            入会金 2,200円（税込）／ 月会費 4,070円〜（税込）<br>
+            月2回・1回90分。教材不要で始められます。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="faq__wrap fade">
+        <h2 class="faq__title">不安は、持ったままで大丈夫です。</h2>
+
+        <details>
+          <summary>歌に自信がありません。</summary>
+          <p>
+            大丈夫です。上手に歌うことより、声を出すこと、仲間と楽しむことを大切にしています。
+          </p>
+        </details>
+
+        <details>
+          <summary>振り付けについていけるか心配です。</summary>
+          <p>
+            できるところだけで構いません。座ったままの参加でも大丈夫です。
+          </p>
+        </details>
+
+        <details>
+          <summary>ひとりで参加しても浮きませんか？</summary>
+          <p>
+            おひとりで参加される方もいらっしゃいます。同じ曲を知っているだけで、自然に会話が生まれます。
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <section class="final">
+      <div class="wrap final__grid fade">
+        <div>
+          <div class="section-kicker en">Start again</div>
+          <h2>
+            もう遅い、ではなく。<br>
+            今だから、似合う歌がある。
+          </h2>
+          <p class="final__text">
+            懐かしい歌を、懐かしいだけで終わらせない。<br>
+            これからの毎日に、声と笑顔と、少しのときめきを。
+          </p>
+
+          <div class="final__cta">
+            <a href="https://www.toriimusic.co.jp/7632/" class="btn btn--main js-track" data-label="final_reserve">無料体験ご予約</a>
+            <a href="tel:0740-22-2063" class="btn btn--sub js-track" data-label="final_tel">電話でお問い合わせ <small>月曜定休</small></a>
+          </div>
+        </div>
+
+        <div class="final__photo" aria-label="青春ポップスのレッスン風景"></div>
+      </div>
+
+      <footer class="footer">
+        <div>
+          ヤマハ青春ポップス｜高島・大津北エリア<br>
+          株式会社トリイ　TEL：0740-22-2063<br>
+          &copy; TORII MUSIC
+        </div>
+      </footer>
+    </section>
+
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const fadeTargets = document.querySelectorAll(".fade");
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
         });
-    </script>
+      }, {
+        threshold: 0.14
+      });
+
+      fadeTargets.forEach(function(target) {
+        observer.observe(target);
+      });
+
+      const trackButtons = document.querySelectorAll(".js-track");
+
+      trackButtons.forEach(function(button) {
+        button.addEventListener("click", function() {
+          const label = button.dataset.label || "cta_click";
+
+          if (typeof gtag === "function") {
+            gtag("event", "cta_click", {
+              event_category: "seishun_pops_lp",
+              event_label: label
+            });
+          }
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
