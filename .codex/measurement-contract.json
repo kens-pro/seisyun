@@ -7,13 +7,13 @@
     "selector": "#trial-application-form",
     "provider": "Formspree",
     "endpoint": "https://formspree.io/f/xpqvlzzk",
-    "success_condition": "Formspree HTTP 2xx response"
+    "success_condition": "Formspree HTTP 2xx response plus Submissions without _status error and successful Email workflow"
   },
   "actions": [
     {
       "name": "seisyun_form_success",
       "selector": "#trial-application-form",
-      "evidence": "formspree_http_success_only",
+      "evidence": "formspree_http_success_with_provider_workflow_verification",
       "desired_role": "primary"
     },
     {
