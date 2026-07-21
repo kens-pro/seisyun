@@ -423,6 +423,100 @@
     .price-note strong { font-size: 1.38rem; font-weight: 500; }
     .price-note span { color: var(--yellow); }
 
+    .application {
+      width: min(860px, 100%);
+      margin: 54px auto 0;
+      padding: 44px;
+      background: rgba(255,255,255,.96);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      scroll-margin-top: 24px;
+    }
+    .application__head { margin-bottom: 30px; }
+    .application__head h3 {
+      margin: 6px 0 10px;
+      color: var(--deep);
+      font-family: var(--serif);
+      font-size: clamp(1.55rem, 3.5vw, 2.35rem);
+      line-height: 1.45;
+      font-weight: 500;
+    }
+    .application__head p { margin: 0; color: var(--muted); }
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px 18px;
+    }
+    .form-field { min-width: 0; }
+    .form-field--wide { grid-column: 1 / -1; }
+    .form-label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--deep);
+      font-weight: 700;
+      line-height: 1.5;
+    }
+    .form-required {
+      margin-left: 6px;
+      color: var(--rose);
+      font-family: var(--latin);
+      font-size: .76rem;
+    }
+    .form-control {
+      width: 100%;
+      min-height: 54px;
+      padding: 13px 15px;
+      border: 1px solid rgba(75,49,64,.28);
+      border-radius: 4px;
+      background: #fff;
+      color: var(--text);
+      font: inherit;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    textarea.form-control { min-height: 126px; resize: vertical; }
+    .form-control:focus {
+      outline: 3px solid rgba(255,214,105,.5);
+      border-color: var(--rose);
+    }
+    .choice-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .choice-card {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      min-height: 52px;
+      padding: 10px 14px;
+      border: 1px solid rgba(75,49,64,.22);
+      background: #fffaf3;
+      cursor: pointer;
+      line-height: 1.45;
+    }
+    .choice-card input { width: 18px; height: 18px; accent-color: var(--rose); flex: 0 0 auto; }
+    .privacy-consent {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin: 26px 0 18px;
+      color: var(--muted);
+      font-size: .91rem;
+      line-height: 1.7;
+    }
+    .privacy-consent input { width: 18px; height: 18px; margin-top: 5px; accent-color: var(--rose); flex: 0 0 auto; }
+    .privacy-consent a { text-underline-offset: 3px; }
+    .form-submit { width: 100%; border: 0; cursor: pointer; }
+    .form-submit:disabled { cursor: wait; opacity: .7; }
+    .form-status {
+      display: none;
+      margin: 18px 0 0;
+      padding: 14px 16px;
+      font-weight: 700;
+      line-height: 1.7;
+    }
+    .form-status.is-success { display: block; background: #edf8e7; color: #31562c; }
+    .form-status.is-error { display: block; background: #fff0ed; color: #8a342b; }
+    .form-note { margin: 14px 0 0; color: var(--muted); font-size: .86rem; text-align: center; }
+    .form-honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
     .faq__wrap { width: min(860px, calc(100% - 40px)); margin-inline: auto; }
     .faq__title {
       font-family: var(--serif);
@@ -539,6 +633,8 @@
       .poem__image-b { right: -4vw; width: 78%; height: 210px; }
       .trial-box { grid-template-columns: 1fr; }
       .place, .price-note { padding: 28px 22px; }
+      .application { padding: 30px 20px; }
+      .form-grid, .choice-grid { grid-template-columns: 1fr; }
       .final { padding-top: 78px; }
       .final__photo { height: 290px; }
       .sticky-cta { left: 10px; right: auto; width: calc(100% - 20px); bottom: 10px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
@@ -573,7 +669,7 @@
     <div class="cta-bar__box">
       <p>8月5日・19日（水）13:00、体験・見学受付中。初めての方も安心してご参加いただけます。</p>
       <div class="cta-actions">
-        <a href="https://www.toriimusic.co.jp/7632/" class="btn btn--main js-track" data-label="first_reserve">8月の体験・見学を予約</a>
+        <a href="#seisyun-form" class="btn btn--main js-form-open" data-label="first_form">8月の体験・見学を予約</a>
         <a href="tel:0740-22-2063" class="btn btn--sub js-track" data-label="first_tel">電話で相談 <small>10:30-19:30</small></a>
       </div>
     </div>
@@ -693,6 +789,64 @@
             月2回・1回90分。楽譜が読めなくても始められます。
           </p>
         </div>
+        <div class="application" id="seisyun-form">
+          <div class="application__head">
+            <div class="section-kicker en">Trial application</div>
+            <h3>体験・見学のお申し込み</h3>
+            <p>ご希望を送信してください。担当者からご連絡し、参加日時を確認します。</p>
+          </div>
+          <form id="trial-application-form" action="https://formspree.io/f/xpqvlzzk" method="POST">
+            <input type="hidden" name="_subject" value="青春ポップス｜大津わにセンター 体験・見学申込">
+            <input type="hidden" name="source_page" value="https://kens-pro.github.io/seisyun/">
+            <input type="hidden" name="utm_source" value="">
+            <input type="hidden" name="utm_medium" value="">
+            <input type="hidden" name="utm_campaign" value="">
+            <div class="form-honeypot" aria-hidden="true">
+              <label>この欄は入力しないでください<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
+            </div>
+            <div class="form-grid">
+              <div class="form-field">
+                <label class="form-label" for="applicant-name">お名前<span class="form-required">必須</span></label>
+                <input class="form-control" id="applicant-name" type="text" name="お名前" autocomplete="name" required>
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="applicant-phone">電話番号<span class="form-required">必須</span></label>
+                <input class="form-control" id="applicant-phone" type="tel" name="電話番号" autocomplete="tel" inputmode="tel" required>
+              </div>
+              <div class="form-field form-field--wide">
+                <label class="form-label" for="applicant-email">メールアドレス<span class="form-required">任意</span></label>
+                <input class="form-control" id="applicant-email" type="email" name="email" autocomplete="email">
+              </div>
+              <fieldset class="form-field form-field--wide" style="border:0;padding:0;margin:0;">
+                <legend class="form-label">ご希望<span class="form-required">必須</span></legend>
+                <div class="choice-grid">
+                  <label class="choice-card"><input type="radio" name="ご希望" value="体験を希望" required>体験を希望</label>
+                  <label class="choice-card"><input type="radio" name="ご希望" value="見学を希望" required>見学を希望</label>
+                </div>
+              </fieldset>
+              <div class="form-field form-field--wide">
+                <label class="form-label" for="preferred-date">ご希望日<span class="form-required">必須</span></label>
+                <select class="form-control" id="preferred-date" name="ご希望日" required>
+                  <option value="">選択してください</option>
+                  <option value="8月5日（水）13:00">8月5日（水）13:00</option>
+                  <option value="8月19日（水）13:00">8月19日（水）13:00</option>
+                  <option value="どちらでもよい・相談したい">どちらでもよい・相談したい</option>
+                </select>
+              </div>
+              <div class="form-field form-field--wide">
+                <label class="form-label" for="applicant-message">ご質問・連絡しやすい時間<span class="form-required">任意</span></label>
+                <textarea class="form-control" id="applicant-message" name="ご質問・連絡しやすい時間" placeholder="例：平日の15時以降に電話希望"></textarea>
+              </div>
+            </div>
+            <label class="privacy-consent">
+              <input type="checkbox" name="個人情報の取扱いに同意" value="同意する" required>
+              <span><a href="https://www.toriimusic.co.jp/privacy_policy/" target="_blank" rel="noopener">プライバシーポリシー</a>を確認し、連絡に必要な個人情報の送信に同意します。</span>
+            </label>
+            <button class="btn btn--main form-submit" type="submit">この内容で申し込む</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            <p class="form-note">送信だけで入会は確定しません。担当者からのご連絡をもって体験・見学日時を調整します。</p>
+          </form>
+        </div>
       </div>
     </section>
 
@@ -721,7 +875,7 @@
           <h2 class="section-title">もう遅い、ではなく。<br>今だから、似合う歌がある。</h2>
           <p class="final__text">懐かしい歌を、懐かしいだけで終わらせない。これからの毎日に、声と笑顔と、少しのときめきを。</p>
           <div class="final__cta">
-            <a href="https://www.toriimusic.co.jp/7632/" class="btn btn--main js-track" data-label="final_reserve">8月の体験・見学を予約</a>
+            <a href="#seisyun-form" class="btn btn--main js-form-open" data-label="final_form">8月の体験・見学を予約</a>
             <a href="tel:0740-22-2063" class="btn btn--sub js-track" data-label="final_tel">電話でお問い合わせ <small>月曜定休</small></a>
           </div>
         </div>
@@ -738,7 +892,7 @@
   </main>
 
   <div class="sticky-cta" aria-label="固定予約ボタン">
-    <a href="https://www.toriimusic.co.jp/7632/" class="btn btn--main js-track" data-label="sticky_reserve">体験・見学</a>
+    <a href="#seisyun-form" class="btn btn--main js-form-open" data-label="sticky_form">体験・見学</a>
     <a href="tel:0740-22-2063" class="btn btn--sub js-track" data-label="sticky_tel">電話</a>
   </div>
 
@@ -766,18 +920,62 @@
       }
 
       document.addEventListener("click", function(event) {
-        const button = event.target.closest(".js-track");
-        if (!button) return;
+        const formButton = event.target.closest(".js-form-open");
+        if (formButton) {
+          sendSeisyunEvent("seisyun_form_open", {
+            cta_location: formButton.dataset.label || "unknown"
+          });
+          return;
+        }
 
-        const ctaLocation = button.dataset.label || "unknown";
-        const isPhone = button.matches('a[href^="tel:"]');
-        sendSeisyunEvent(
-          isPhone ? "seisyun_phone_click" : "seisyun_reserve_click",
-          {
-            cta_location: ctaLocation,
-            link_type: isPhone ? "phone" : "reservation"
-          }
-        );
+        const phoneButton = event.target.closest('a.js-track[href^="tel:"]');
+        if (phoneButton) {
+          sendSeisyunEvent("seisyun_phone_click", {
+            cta_location: phoneButton.dataset.label || "unknown",
+            link_type: "phone"
+          });
+        }
+      });
+
+      const applicationForm = document.getElementById("trial-application-form");
+      const formStatus = document.getElementById("form-status");
+      const submitButton = applicationForm.querySelector('button[type="submit"]');
+      const query = new URLSearchParams(window.location.search);
+
+      ["utm_source", "utm_medium", "utm_campaign"].forEach(function(name) {
+        const field = applicationForm.elements.namedItem(name);
+        if (field) field.value = query.get(name) || "";
+      });
+
+      applicationForm.addEventListener("submit", async function(event) {
+        event.preventDefault();
+        formStatus.className = "form-status";
+        formStatus.textContent = "";
+        submitButton.disabled = true;
+        submitButton.textContent = "送信中です…";
+        sendSeisyunEvent("seisyun_form_attempt", { form_id: "trial-application-form" });
+
+        try {
+          const response = await fetch(applicationForm.action, {
+            method: applicationForm.method,
+            body: new FormData(applicationForm),
+            headers: { "Accept": "application/json" }
+          });
+
+          if (!response.ok) throw new Error("Formspree rejected the submission");
+
+          sendSeisyunEvent("seisyun_form_success", { form_id: "trial-application-form" });
+          applicationForm.reset();
+          formStatus.className = "form-status is-success";
+          formStatus.textContent = "送信できました。担当者からご連絡しますので、しばらくお待ちください。";
+          submitButton.textContent = "送信済み";
+        } catch (error) {
+          sendSeisyunEvent("seisyun_form_error", { form_id: "trial-application-form" });
+          formStatus.className = "form-status is-error";
+          formStatus.textContent = "送信できませんでした。時間をおいて再度お試しいただくか、0740-22-2063へお電話ください。";
+          submitButton.disabled = false;
+          submitButton.textContent = "もう一度送信する";
+        }
       });
     });
   </script>
