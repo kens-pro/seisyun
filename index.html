@@ -515,7 +515,6 @@
     .form-status.is-success { display: block; background: #edf8e7; color: #31562c; }
     .form-status.is-error { display: block; background: #fff0ed; color: #8a342b; }
     .form-note { margin: 14px 0 0; color: var(--muted); font-size: .86rem; text-align: center; }
-    .form-honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
     .faq__wrap { width: min(860px, calc(100% - 40px)); margin-inline: auto; }
     .faq__title {
@@ -801,9 +800,6 @@
             <input type="hidden" name="utm_source" value="">
             <input type="hidden" name="utm_medium" value="">
             <input type="hidden" name="utm_campaign" value="">
-            <div class="form-honeypot" aria-hidden="true">
-              <label>この欄は入力しないでください<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
-            </div>
             <div class="form-grid">
               <div class="form-field">
                 <label class="form-label" for="applicant-name">お名前<span class="form-required">必須</span></label>
