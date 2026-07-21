@@ -1,0 +1,27 @@
+{
+  "project": "大津わにセンター 青春ポップス",
+  "source_path": "index.html",
+  "public_url": "https://kens-pro.github.io/seisyun/",
+  "business_outcome": "青春ポップスへの入会",
+  "form": null,
+  "actions": [
+    {
+      "name": "seisyun_reserve_click",
+      "selector": "a[href='https://www.toriimusic.co.jp/7632/']",
+      "evidence": "external_reservation_link_click_only",
+      "desired_role": "primary"
+    },
+    {
+      "name": "seisyun_phone_click",
+      "selector": "a[href^='tel:']",
+      "evidence": "telephone_link_click_only",
+      "desired_role": "secondary"
+    }
+  ],
+  "measurement": {
+    "implementation": "direct_ga4",
+    "measurement_id": "G-ZZWDKHLP4T",
+    "destination_status": "needs_ownership_check"
+  },
+  "channels": []
+}
