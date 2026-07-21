@@ -3,13 +3,36 @@
   "source_path": "index.html",
   "public_url": "https://kens-pro.github.io/seisyun/",
   "business_outcome": "青春ポップスへの入会",
-  "form": null,
+  "form": {
+    "selector": "#trial-application-form",
+    "provider": "Formspree",
+    "endpoint": "https://formspree.io/f/xpqvlzzk",
+    "success_condition": "Formspree HTTP 2xx response"
+  },
   "actions": [
     {
-      "name": "seisyun_reserve_click",
-      "selector": "a[href='https://www.toriimusic.co.jp/7632/']",
-      "evidence": "external_reservation_link_click_only",
+      "name": "seisyun_form_success",
+      "selector": "#trial-application-form",
+      "evidence": "formspree_http_success_only",
       "desired_role": "primary"
+    },
+    {
+      "name": "seisyun_form_open",
+      "selector": "a[href='#seisyun-form']",
+      "evidence": "embedded_form_cta_click",
+      "desired_role": "micro"
+    },
+    {
+      "name": "seisyun_form_attempt",
+      "selector": "#trial-application-form",
+      "evidence": "valid_form_submit_attempt",
+      "desired_role": "diagnostic"
+    },
+    {
+      "name": "seisyun_form_error",
+      "selector": "#trial-application-form",
+      "evidence": "formspree_http_or_network_failure",
+      "desired_role": "diagnostic"
     },
     {
       "name": "seisyun_phone_click",
