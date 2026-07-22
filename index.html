@@ -2,13 +2,22 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZWDKHLP4T"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-ZZWDKHLP4T');
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MSD7G7FP');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xqcz15bcnj");
   </script>
+  <!-- End Microsoft Clarity -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ヤマハ青春ポップス | 大津わにセンター 8月体験・見学受付中</title>
   <meta name="description" content="大津市和邇のヤマハ青春ポップス。昭和歌謡を歌って、軽く動いて、仲間と笑う大人の歌の教室。8月5日・19日（水）13:00 体験・見学受付中。">
@@ -642,6 +651,10 @@
   </style>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MSD7G7FP"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <header class="hero">
     <div class="scroll-mark">SCROLL</div>
     <div class="hero__inner">
@@ -905,14 +918,9 @@
       }, { threshold: 0.14 });
       fadeTargets.forEach(function(target) { observer.observe(target); });
 
-      const measurementId = "G-ZZWDKHLP4T";
-
       function sendSeisyunEvent(eventName, parameters) {
-        if (typeof gtag !== "function") return;
-        gtag("event", eventName, Object.assign({
-          send_to: measurementId,
-          transport_type: "beacon"
-        }, parameters));
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push(Object.assign({ event: eventName }, parameters));
       }
 
       document.addEventListener("click", function(event) {

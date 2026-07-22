@@ -42,9 +42,17 @@
     }
   ],
   "measurement": {
-    "implementation": "direct_ga4",
+    "implementation": "gtm",
+    "container_id": "GTM-MSD7G7FP",
     "measurement_id": "G-ZZWDKHLP4T",
-    "destination_status": "needs_ownership_check"
+    "ga4_account": "toriimusic",
+    "ga4_property": "githubLP",
+    "ga4_property_id": "493086419",
+    "gtm_account": "github.io",
+    "clarity_account": "健一 吉田",
+    "clarity_project": "大津わに｜青春ポップスLP",
+    "clarity_project_id": "xqcz15bcnj",
+    "destination_status": "owner_confirmed"
   },
   "channels": []
 }
