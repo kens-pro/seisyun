@@ -31,7 +31,6 @@
       const entry=current===0?1:ease(clamp(local/.22));
       const opacity=isCurrent?entry:isPrevious?1-entry:0;
       const settled=ease(clamp((phase-.12)/.34));
-      const outgoing=index<2?ease(clamp((phase-.83)/.17)):0;
       // Once the photograph has settled, keep its dimensions through the handoff.
       const shrink=settled;
       const scale=1-(mobile.matches?.10:.42)*shrink;
@@ -46,8 +45,8 @@
       photo.style.transform=`translate3d(${x.toFixed(2)}px,${(y+arriving).toFixed(2)}px,0) scale(${scale.toFixed(4)})`;
       panel.style.opacity=opacity.toFixed(4);
       panel.style.zIndex=String(index+1);
-      // Only the current scene can show text; outgoing photographs may still overlap.
-      const text=isCurrent?ease(clamp((settled-.62)/.38))*(1-outgoing)*opacity:0;
+      // Keep the settled text until the scene changes. The previous scene never reappears.
+      const text=isCurrent?ease(clamp((settled-.62)/.38))*opacity:0;
       const copy=panel.querySelector('.story-copy');
       copy.style.opacity=text.toFixed(4);
       copy.style.transform=`translate3d(0,${((1-text)*22).toFixed(2)}px,0)`;
