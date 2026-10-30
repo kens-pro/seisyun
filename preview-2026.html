@@ -77,7 +77,7 @@
 <div><dt>アクセス</dt><dd>JR湖西線「和邇」駅すぐ・駐車場あり</dd></div>
 <div><dt>通常レッスン</dt><dd>水曜日 13:00〜14:30／月2回</dd></div>
 <div><dt>講師</dt><dd>今和泉絵麻先生<br><small style="font-weight:400;color:var(--muted)">声楽出身。歌とエレクトーンを通して、仲間と音楽を楽しむ時間をつくります。</small></dd></div>
-<div><dt>体験日のご案内</dt><dd>11月11日・25日（水）を候補として受付中。<br><small style="font-weight:400;color:var(--muted)">日程は担当者の折り返し連絡で確定します。12月以降や別日についてもお気軽にご相談ください。</small></dd></div>
+<div><dt>体験日のご案内</dt><dd>水曜日13:00〜14:30（月2回）。体験・見学のご希望日をお知らせください。<br><small style="font-weight:400;color:var(--muted)">直近の開催日をご案内します。担当者からの折り返し連絡で確定します。</small></dd></div>
 </dl></div>
 </div></section>
 <section class="section faq"><div class="wrap faq-grid"><div><p class="section-kicker">FAQ</p><h2>気になること、<br>ありませんか。</h2><p class="section-intro">迷っている方こそ、まずは見学からどうぞ。</p></div>
@@ -101,7 +101,7 @@
 <div class="field"><label for="phone">電話番号 <span class="required">必須</span></label><input id="phone" name="電話番号" type="tel" inputmode="tel" autocomplete="tel" maxlength="30" required></div>
 <div class="field wide"><label for="email">メールアドレス <span class="optional">任意</span></label><input id="email" name="email" type="email" autocomplete="email" maxlength="254"></div>
 <div class="field wide"><fieldset><legend>ご希望 <span class="required">必須</span></legend><div class="radio-line"><label><input type="radio" name="ご希望" value="体験希望" required> 体験を希望</label><label><input type="radio" name="ご希望" value="見学希望" required> 見学を希望</label></div></fieldset></div>
-<div class="field wide"><label for="date">ご希望日 <span class="required">必須</span></label><select id="date" name="ご希望日" required><option value="">選択してください</option><option value="2026年11月11日（水）13:00" data-date="2026-11-11">11月11日（水）13:00〜14:30（候補）</option><option value="2026年11月25日（水）13:00" data-date="2026-11-25">11月25日（水）13:00〜14:30（候補）</option><option value="12月以降で相談したい">12月以降で相談したい</option><option value="日程について相談したい">日程について相談したい</option></select></div>
+<div class="field wide"><label for="date">ご希望日 <span class="required">必須</span></label><select id="date" name="ご希望日" required><option value="">選択してください</option><option value="2026年11月11日（水）13:00" data-date="2026-11-11">11月11日（水）13:00〜14:30（候補）</option><option value="2026年11月25日（水）13:00" data-date="2026-11-25">11月25日（水）13:00〜14:30（候補）</option><option value="できるだけ早く参加したい">できるだけ早く参加したい</option><option value="日程について相談したい">日程について相談したい</option></select></div>
 <div class="field wide"><label for="message">ご質問・連絡しやすい時間 <span class="optional">任意</span></label><textarea id="message" name="ご質問・連絡しやすい時間" maxlength="3000" rows="3" placeholder="例：平日15時以降に電話希望"></textarea></div>
 </div>
 <label class="consent"><input type="checkbox" name="個人情報の取扱いに同意" value="同意する" required><span><a href="https://www.toriimusic.co.jp/privacy_policy/" target="_blank" rel="noopener noreferrer" style="color:var(--wine)">プライバシーポリシー</a>を確認し、お問い合わせへの連絡に必要な個人情報の送信に同意します。</span></label>
@@ -120,8 +120,8 @@ var q=new URLSearchParams(location.search);
 ["utm_source","utm_medium","utm_campaign"].forEach(function(k){form.elements.namedItem(k).value=q.get(k)||""});
 document.getElementById("source-page").value=location.href.split("#")[0];
 function event(name,params){window.dataLayer=window.dataLayer||[];window.dataLayer.push(Object.assign({event:name},params||{}))}
-document.querySelectorAll(".js-cta").forEach(function(el){el.addEventListener("click",function(){event(el.getAttribute("href").indexOf("tel:")===0?"seisyun_phone_click":"seisyun_form_open",{cta_location:el.dataset.cta||"unknown"})})});
-function updateDate(){document.querySelectorAll("#date option[data-date]").forEach(function(opt){if(Date.now()>Date.parse(opt.dataset.date+"T14:30:00+09:00")){opt.disabled=true;if(opt.selected)date.value="";if(!opt.textContent.includes("終了"))opt.textContent+="（受付終了）"}})}
+document.querySelectorAll(".js-cta").forEach(function(el){el.addEventListener("click",function(){event(el.getAttribute("href").indexOf("tel:")===0?"seisyun_phone_click":el.getAttribute("href")==="#contact"?"seisyun_form_open":"seisyun_details_click",{cta_location:el.dataset.cta||"unknown"})})});
+function updateDate(){document.querySelectorAll("#date option[data-date]").forEach(function(opt){if(Date.now()>Date.parse(opt.dataset.date+"T14:30:00+09:00")){if(opt.selected)date.value="";opt.remove()}})}
 updateDate();date.addEventListener("focus",updateDate);document.addEventListener("visibilitychange",function(){if(!document.hidden)updateDate()});
 form.addEventListener("submit",async function(e){
 e.preventDefault();if(busy||complete)return;updateDate();if(!form.reportValidity())return;
